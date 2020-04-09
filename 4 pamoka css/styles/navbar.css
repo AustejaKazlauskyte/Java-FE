@@ -1,6 +1,16 @@
+body{
+  padding-top: 90px;
+}
+
 .navbar{
-  background: lightblue;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #fffd;
   height: 90px;
+  z-index: 10;
+  box-shadow: 0 2px 2px #0001;
 }
 
 .logo-container{
@@ -41,4 +51,10 @@
 */
 .links li:not(:last-of-type){
   margin-right: 10px;
+}
+
+/* Navbar lipimo ant turinio pataisymas Chaltura 3000 */
+.anchor-fix{
+  padding-top: 90px;
+  margin-top: -90px;
 }
