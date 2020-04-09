@@ -1,0 +1,20 @@
+.square40x40{
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+}
+
+.bg-red{
+  background: #bb0000;
+}
+
+.border{
+  border-style: solid;
+  border-width: 1px;
+}
+
+.border--red{
+  border-color: red;
+}
+
+
