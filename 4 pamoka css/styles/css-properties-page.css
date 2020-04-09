@@ -17,4 +17,13 @@
   border-color: red;
 }
 
+.static-example{
+  border: 2px solid grey;
+  font-size: 0;
+  padding: 7px;
+}
+
+
+
+
 

@@ -106,10 +106,12 @@ strong {
 
 .float-left {
     float: left;
+    display: block;
 }
 
 .float-right {
     float: right;
+    display: block;
 }
 
 .d300x300 {

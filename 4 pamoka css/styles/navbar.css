@@ -26,7 +26,8 @@ body{
 }
 
 .links li {
-  display: inline-block;
+  display: block;
+  float: right;
 }
 
 .links li a {
@@ -49,9 +50,9 @@ body{
     Visiens <li> elementams esantiems elemente su class="links",
   išskyrus (:not(...)) paskutiniam elementui (:last-of-type) 
 */
-.links li:not(:last-of-type){
+/* .links li:not(:last-of-type){
   margin-right: 10px;
-}
+} */
 
 /* Navbar lipimo ant turinio pataisymas Chaltura 3000 */
 .anchor-fix{
