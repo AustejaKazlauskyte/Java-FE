@@ -199,20 +199,71 @@
           pradinio puslapio užkrovimo lango viewport'o.
         </p>
         <div class="absolute-example pos-relative">
-          <div class="square60x60 bg-red"></div>
-          <div class="square60x60 bg-green text-center text-white font-size-sm pos-absolute top-1 right-1">top, right</div>
-          <div class="square60x60 bg-green text-center text-white font-size-sm pos-absolute left-1 bottom-1">bottom, left</div>
+          <div class="pos-absolute pos-expand z-5">
+            <h1>Svarbus tekstas</h1>
+            <div class="square60x60 bg-green text-center text-white font-size-sm pos-absolute top-1 right-1">top, right
+            </div>
+            <div class="square60x60 bg-green text-center text-white font-size-sm pos-absolute left-1 bottom-1">bottom,
+              left</div>
+            <div class="square60x60 bg-red"></div>
+          </div>
+          <div class="bg-img pos-absolute pos-expand z-4 opacity-30">
+            <img src="../img/conference.jfif" alt="Conference image">
+            <!-- Klaidingo panaudojimo atveju, bus nerodoma -->
+            <img src="../img/html-hierarchy.gif" alt="Conference image">
+          </div>
+          <div class="bg-blue pos-absolute pos-expand z-3 opacity-30"></div>
+
         </div>
       </div>
       <div>
         <h3>Sticky</h3>
         <p>
           Tai toks pozicionavimo būdas, kuomet elementas ieško tėvinės hierarchijos šakoje pirmo sutikto
-          <strong>nestatic</strong> elemento. Suradęs jį, atsispiria nuo jo kontūrų naudojant savybes: top, right,
+          <strong>ne static</strong> elemento. Suradęs jį, atsispiria nuo jo kontūrų naudojant savybes: top, right,
           bottom, left <strong>ir išlieka toje pačioje pozicijoje</strong>. Jeigu tėvinės hierarchijos šakoje neranda
-          elemento su <strong>ne static</strong>pozicionavimu, atsispiria<strong>ir išlieka</strong> toje pačioje
+          elemento su <strong>ne static</strong> pozicionavimu, atsispiria <strong> ir išlieka</strong> toje pačioje
           pozicijoje nuo pradinio puslapio užkrovimo lango viewport'o.
         </p>
+        <div class="sticky-example">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam eveniet earum quasi dolorum error quaerat
+            magni delectus molestias, inventore odio minus! Facere, culpa accusantium praesentium sunt voluptas
+            consequatur dolor. Natus sed, sit doloribus corporis dolores quidem repudiandae architecto aut harum
+            veritatis ratione suscipit nobis distinctio soluta reprehenderit ducimus sunt facilis magnam amet ad! Animi
+            natus laboriosam neque temporibus odit ea recusandae commodi asperiores eveniet reiciendis nulla quaerat,
+            minima praesentium. Saepe hic magnam, at repudiandae possimus eum ad quos praesentium cum, quod temporibus
+            nesciunt porro a ut dolorum consequuntur velit corrupti in officiis doloremque accusantium ullam cumque
+            esse? Tempore iusto obcaecati unde nemo quia qui perspiciatis illum perferendis, voluptates at sequi
+            suscipit optio consequatur dignissimos, omnis non! Blanditiis tenetur doloribus suscipit asperiores hic fuga
+            alias sit delectus totam aut quae nihil impedit deserunt, laudantium quas reprehenderit quidem distinctio
+            repudiandae modi vero.
+          </p>
+          <div class="square60x60 bg-yellow text-center pos-sticky top-1">top 1rem</div>
+          <div class="square60x60 bg-yellow text-center pos-sticky bottom-1">bot 1rem</div>
+          <p>
+             Iusto pariatur consequuntur nesciunt quisquam amet ut praesentium repudiandae
+            voluptas vitae expedita repellendus itaque facere ullam dicta omnis assumenda ratione, saepe nostrum. Magni
+            pariatur hic, distinctio necessitatibus at, voluptas quidem error nulla possimus non sint. Pariatur ipsum
+            numquam sequi inventore harum qui blanditiis adipisci rem voluptates, debitis veritatis recusandae quisquam.
+            Laudantium, architecto cumque. Voluptatibus facilis nesciunt illum nam consectetur nihil porro ipsum
+            temporibus, eveniet sunt dolores laudantium reprehenderit vero! Laudantium voluptates maiores neque ipsum
+            ab. Culpa doloremque cumque labore quasi dolor optio totam illo veniam eum magni quo sunt corrupti ea amet
+            quisquam aliquam natus est quam itaque adipisci maxime iste consequuntur, quaerat provident! Quos aspernatur
+            quasi sed? Dolores obcaecati necessitatibus incidunt accusantium nobis consectetur aliquam quam magni
+            recusandae, porro eligendi saepe dolor molestiae tempore? Accusamus vero pariatur cumque harum facere amet
+            nam enim maxime iure maiores quasi perspiciatis ad ipsam voluptas aspernatur eligendi rem repudiandae
+            delectus officia sapiente, beatae itaque suscipit temporibus perferendis. Eius assumenda tenetur quo illo
+            nemo quos error modi est quisquam! Autem, magni repellat! Nobis expedita perferendis excepturi laborum
+            quidem modi cupiditate commodi eligendi et rem sapiente, harum dolorum, rerum deserunt placeat aliquid
+            tenetur saepe ut non. Exercitationem rem neque numquam enim! Veritatis ducimus recusandae in harum earum,
+            quas vitae praesentium a eaque! Iusto quas illo ipsum neque inventore magnam architecto error, totam
+            numquam, rerum impedit blanditiis nisi vel, dolores mollitia! Praesentium quibusdam consequuntur ratione
+            illo reiciendis? Cumque quia id nam, obcaecati aliquid cum eos omnis perferendis optio, deleniti sunt
+            tempore quibusdam molestiae accusantium fuga ad similique debitis sapiente sed veniam doloremque! Eligendi,
+            repellendus. Et, blanditiis.
+          </p>
+        </div>
       </div>
 
       <div>
