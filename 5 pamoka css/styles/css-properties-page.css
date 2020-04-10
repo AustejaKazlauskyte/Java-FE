@@ -1,0 +1,95 @@
+.square60x60{
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+}
+
+.bg-red{
+  background: #bb0000;
+}
+
+.border{
+  border-style: solid;
+  border-width: 1px;
+}
+
+.border--red {
+  border-color: red;
+}
+
+.bg-blue{
+  background: blue;
+}
+
+.bg-green{
+  background: green;
+}
+
+.static-example,
+.relative-example,
+.absolute-example {
+  border: 2px solid grey;
+  padding: 7px;
+  font-size: 0;
+}
+
+.static-example *,
+.relative-example *,
+.absolute-example  *{
+  font-size: 1rem;
+  vertical-align: top;
+}
+
+.absolute-example{
+  height: 300px;
+}
+
+.text-white {
+  color: #fff;
+}
+
+.font-size-sm {
+  font-size: .75rem;
+}
+
+.square60x60.font-size-sm {
+  line-height: 30px;
+}
+
+.pos-static{
+  position: static;
+}
+
+.pos-relative{
+  position: relative;
+}
+
+.pos-absolute{
+  position: absolute;
+}
+
+.pos-fixed{
+  position: fixed;
+}
+
+.pos-sticky{
+  position: sticky;
+}
+
+.top-1{
+  top: 1rem;
+}
+
+.right-1{
+  right: 1rem;
+}
+
+.bottom-1{
+  bottom: 1rem;
+}
+
+.left-1{
+  left: 1rem;
+}
+
+

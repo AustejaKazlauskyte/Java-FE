@@ -1,0 +1,47 @@
+.video {
+  width: 100%;
+  height: 500px;
+}
+
+
+.bg-ornament{
+  position: relative;
+}
+
+.bg-ornament:before{
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  content: "";
+  background: rgb(252, 209, 185);
+  clip-path: polygon(0 45%, 100% 0%, 100% 55%, 0% 100%);
+  z-index: -1;
+}
+
+.main-header{
+  font-size: 1.5rem;
+}
+
+.secondary-header{
+  font-size: 1.3rem;
+  color: #555;
+  font-weight: 500;
+}
+
+.sub-header{
+  font-size: 1.3rem;
+  color: #666;
+  font-weight: 500;
+}
+
+.secondary-section{
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+.sub-section{
+  margin-left: 2rem;
+  margin-right: 2rem;
+}

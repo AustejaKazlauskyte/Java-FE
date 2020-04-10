@@ -13,17 +13,17 @@
   border-width: 1px;
 }
 
-.border--red{
+.border--red {
   border-color: red;
 }
 
-.static-example{
+.static-example {
   border: 2px solid grey;
-  font-size: 0;
-  padding: 7px;
+  /* padding: 7px; */
+  /* font-size: 0; */
+  height: 44px;
 }
 
-
-
-
-
+.static-example *{
+  float: left;
+}

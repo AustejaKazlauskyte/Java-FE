@@ -46,7 +46,7 @@
       <hr>
       <div>
         <h1>Box Model Pratybos</h1>
-        <h3>Sukurkite 40x40 pikselių dydžio kvadratus (bet kokios spalvos) kurie turėtų:</h3>
+        <h3>Sukurkite 60x60 pikselių dydžio kvadratus (bet kokios spalvos) kurie turėtų:</h3>
         <ul>
           <li>10px margin iš viršaus ir apačios</li>
           <li>10px margin iš kairės</li>
@@ -56,12 +56,12 @@
           <li>10px visose pusėsė, 10px padding viršuje ir apačioje</li>
           <li>10px keirėje pusėsė, 10px padding dešinėje. Uždėkite mė sienelę.</li>
         </ul>
-        <div class="square40x40 bg-red my"></div>
-        <div class="square40x40 bg-red mt ml mb"></div>
-        <div class="square40x40 bg-red ml p"></div><!-- Reikai užbaigti -->
-        <div class="square40x40 bg-red ml"></div><!-- Reikai užbaigti -->
-        <div class="square40x40 bg-red ml"></div><!-- Reikai užbaigti -->
-        <div class="square40x40 bg-red ml"></div><!-- Reikai užbaigti -->
+        <div class="square60x60 bg-red my"></div>
+        <div class="square60x60 bg-red mt ml mb"></div>
+        <div class="square60x60 bg-red ml p"></div><!-- Reikai užbaigti -->
+        <div class="square60x60 bg-red ml"></div><!-- Reikai užbaigti -->
+        <div class="square60x60 bg-red ml"></div><!-- Reikai užbaigti -->
+        <div class="square60x60 bg-red ml"></div><!-- Reikai užbaigti -->
       </div>
     </div>
   </section>
@@ -120,10 +120,11 @@
       <h3>Float panaudojimas norint panaikinti tarpą tarp nuotraukų</h3>
       <img class="float-left w-50" src="../img/box-model.png" alt="">
       <img class="float-left w-50" src="../img/box-model.png" alt="">
+      <div class="clearfix"></div>
     </div>
   </section>
 
-  <section id="position">
+  <section class="anchor-fix" id="position">
     <div class="container">
       <h1>Position</h1>
       <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/position" target="blank">Position dokumentacija ir
@@ -135,9 +136,26 @@
           o kuomet elementai netelpa, persikelia į sekančią eilutę.
         </p>
         <div class="static-example">
-          <div class="square40x40 bg-red"></div>
-          <div class="square40x40 bg-red"></div>
-          <div class="square40x40 bg-red"></div>
+          <div class="square60x60 bg-red mb"></div>
+          <div class="square60x60 bg-red ml mb"></div>
+          <div class="square60x60 bg-red ml mb"></div>
+          <div class="square60x60 bg-red ml mb"></div>
+          <div class="square60x60 bg-red ml mb"></div>
+          <div class="square60x60 bg-red ml mb"></div>
+          <div class="square60x60 bg-red ml mb"></div>
+          <div class="square60x60 bg-red ml mb"></div>
+          <div class="square60x60 bg-red ml mb"></div>
+          <div class="square60x60 bg-red ml mb"></div>
+          <div class="square60x60 bg-red ml mb"></div>
+          <div class="square60x60 bg-red "></div>
+          <div class="square60x60 bg-red ml"></div>
+          <div class="square60x60 bg-red ml"></div>
+          <div class="square60x60 bg-red ml"></div>
+          <div class="square60x60 bg-red ml"></div>
+          <div class="square60x60 bg-red ml"></div>
+          <div class="square60x60 bg-red ml"></div>
+          <div class="square60x60 bg-red ml"></div>
+          <div class="square60x60 bg-red ml"></div>
         </div>
       </div>
       <div>
@@ -147,33 +165,64 @@
           naudojant CSS saybes: top, right, bottom, left. Naudojant šias savybes jis paslenkamas nuo jo menamos static
           pozicijos.
         </p>
+        <div class="relative-example">
+          <div class="square60x60 bg-red mb"></div>
+          <div class="square60x60 bg-red ml mb"></div>
+          <div class="square60x60 bg-red ml mb"></div>
+          <div class="square60x60 bg-red ml mb"></div>
+          <div class="square60x60 bg-red ml mb"></div>
+          <div class="square60x60 bg-blue ml mb text-center text-white font-size-sm pos-relative top-1">top: 1rem</div>
+          <div class="square60x60 bg-red ml mb"></div>
+          <div class="square60x60 bg-red ml mb"></div>
+          <div class="square60x60 bg-red ml mb"></div>
+          <div class="square60x60 bg-blue ml mb text-center text-white font-size-sm pos-relative left-1">left: 1rem
+          </div>
+          <div class="square60x60 bg-red ml mb"></div>
+          <div class="square60x60 bg-red"></div>
+          <div class="square60x60 bg-red ml"></div>
+          <div class="square60x60 bg-red ml"></div>
+          <div class="square60x60 bg-blue ml text-center text-white font-size-sm pos-relative right-1">right: 1rem</div>
+          <div class="square60x60 bg-red ml"></div>
+          <div class="square60x60 bg-red ml"></div>
+          <div class="square60x60 bg-blue ml text-center text-white font-size-sm pos-relative bottom-1">bottom: 1rem
+          </div>
+          <div class="square60x60 bg-red ml"></div>
+          <div class="square60x60 bg-red ml"></div>
+        </div>
       </div>
       <div>
         <h3>Absolute</h3>
         <p>
           Tai toks pozicionavimo būdas, kuomet elementas ieško tėvinės hierarchijos šakoje pirmo sutikto <strong>ne
-          static</strong> elemento. Suradęs jį, atsispiria nuo jo kontūrų naudojant savybes: top, right, bottom, left.
+            static</strong> elemento. Suradęs jį, atsispiria nuo jo kontūrų naudojant savybes: top, right, bottom, left.
           Jeigu tėvinės hierarchijos šakoje neranda elemento su <strong>ne static</strong> pozicionavimu, atsispiria nuo
-          viewport'o.
+          pradinio puslapio užkrovimo lango viewport'o.
         </p>
-        <div>
-          <h3>Sticky</h3>
-          <p>
-            Tai toks pozicionavimo būdas, kuomet elementas ieško tėvinės hierarchijos šakoje pirmo sutikto
-            <strong>nestatic</strong> elemento. Suradęs jį, atsispiria nuo jo kontūrų naudojant savybes: top, right,
-            bottom, left <strong>ir išlieka toje pačioje pozicijoje</strong>. Jeigu tėvinės hierarchijos šakoje neranda
-            elemento su <strong>ne static</strong>pozicionavimu, atsispiria<strong>ir išlieka</strong> toje pačioje
-            pozicijoje nuo viewport'o.
-          </p>
-        </div>
-        <div>
-          <h3>Fixed</h3>
-          <p>
-            Tai toks pozicionavimo būdas, kuomet elementas ignoruoja HTML struktūros hierarchiją ir atsispiria nuo
-            viewport'o, naudojant savybes: top, right, bottom, left.
-          </p>
+        <div class="absolute-example pos-relative">
+          <div class="square60x60 bg-red"></div>
+          <div class="square60x60 bg-green text-center text-white font-size-sm pos-absolute top-1 right-1">top, right</div>
+          <div class="square60x60 bg-green text-center text-white font-size-sm pos-absolute left-1 bottom-1">bottom, left</div>
         </div>
       </div>
+      <div>
+        <h3>Sticky</h3>
+        <p>
+          Tai toks pozicionavimo būdas, kuomet elementas ieško tėvinės hierarchijos šakoje pirmo sutikto
+          <strong>nestatic</strong> elemento. Suradęs jį, atsispiria nuo jo kontūrų naudojant savybes: top, right,
+          bottom, left <strong>ir išlieka toje pačioje pozicijoje</strong>. Jeigu tėvinės hierarchijos šakoje neranda
+          elemento su <strong>ne static</strong>pozicionavimu, atsispiria<strong>ir išlieka</strong> toje pačioje
+          pozicijoje nuo pradinio puslapio užkrovimo lango viewport'o.
+        </p>
+      </div>
+
+      <div>
+        <h3>Fixed</h3>
+        <p>
+          Tai toks pozicionavimo būdas, kuomet elementas ignoruoja HTML struktūros hierarchiją ir atsispiria nuo
+          viewport'o, naudojant savybes: top, right, bottom, left.
+        </p>
+      </div>
+    </div>
   </section>
 
 </body>
