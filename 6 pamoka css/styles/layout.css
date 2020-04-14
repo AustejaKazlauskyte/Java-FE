@@ -1,0 +1,25 @@
+.container {
+  width: 920px;
+  margin: auto;
+}
+
+.container-wide {
+  width: 1200px;
+  margin: auto;
+}
+
+.float-left {
+  float: left;
+  display: block;
+}
+
+.float-right {
+  float: right;
+  display: block;
+}
+
+.clearfix{
+  display: table;
+  clear: both;
+  height: 5px;
+}

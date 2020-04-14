@@ -1,8 +1,12 @@
-body{
+html {
+  scroll-behavior: smooth;
+}
+
+body {
   padding-top: 90px;
 }
 
-.navbar{
+.navbar {
   position: fixed;
   top: 0;
   left: 0;
@@ -13,9 +17,9 @@ body{
   box-shadow: 0 2px 2px #0001;
 }
 
-.logo-container{
+.logo-container {
   margin-top: 10px;
-  float: left; /* Paaiškinti vėliau */
+  float: left;
 }
 
 .links {
@@ -32,7 +36,7 @@ body{
 
 .links li a {
   font-weight: 500;
-  color: #555; /* 55 55 55*/
+  color: #555;
   display: inline-block;
   line-height: 90px;
   height: 90px;
@@ -42,7 +46,7 @@ body{
 }
 
 .links li a:hover {
-  background: #0001; /*00 00 00 22*/
+  background: #0001;
   color: #000;
 }
 
@@ -50,12 +54,14 @@ body{
     Visiens <li> elementams esantiems elemente su class="links",
   išskyrus (:not(...)) paskutiniam elementui (:last-of-type) 
 */
+
 /* .links li:not(:last-of-type){
   margin-right: 10px;
 } */
 
 /* Navbar lipimo ant turinio pataisymas - Chaltura 3000 */
-.anchor-fix{
+
+.anchor-fix {
   padding-top: 90px;
   margin-top: -90px;
 }
