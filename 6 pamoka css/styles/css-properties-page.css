@@ -1,0 +1,156 @@
+.square60x60{
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+}
+
+.bg-red{
+  background: #bb0000;
+}
+
+.border{
+  border-style: solid;
+  border-width: 1px;
+}
+
+.border--red {
+  border-color: red;
+}
+
+.bg-blue{
+  background: blue;
+}
+
+.bg-green{
+  background: green;
+}
+
+.bg-yellow{
+  background: yellow;
+}
+
+.bg-white{
+  background: white;
+}
+
+.bg-img{
+  /* Veikia nuotraukom užkrautom naudojant url(...) */
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  width: 100%;
+  /* Paslepia iš elemento kontūrų išeinančius vaikus */
+  overflow: hidden;
+}
+
+.bg-img>img:first-of-type{
+  /* Object-fit naudojame su <img> */
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.static-example,
+.relative-example,
+.absolute-example,
+.sticky-example {
+  border: 2px solid grey;
+  padding: 7px;
+  font-size: 0;
+}
+
+.static-example *,
+.relative-example *,
+.absolute-example  *,
+.sticky-example * {
+  font-size: 1rem;
+  vertical-align: top;
+}
+
+.absolute-example{
+  height: 300px;
+}
+
+.sticky-example{
+  height: 200px;
+  overflow-y: scroll;
+}
+
+.text-white {
+  color: #fff;
+}
+
+.font-size-sm {
+  font-size: .75rem;
+}
+
+.square60x60.font-size-sm {
+  line-height: 30px;
+}
+
+.pos-static{
+  position: static;
+}
+
+.pos-relative{
+  position: relative;
+}
+
+.pos-absolute{
+  position: absolute;
+}
+
+.pos-fixed{
+  position: fixed;
+}
+
+.pos-sticky{
+  position: sticky;
+}
+
+.pos-expand{
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.top-1{
+  top: 1rem;
+}
+
+.right-1{
+  right: 1rem;
+}
+
+.bottom-1{
+  bottom: 1rem;
+}
+
+.left-1{
+  left: 1rem;
+}
+
+.z-0{ z-index: 0; }
+.z-1{ z-index: 1; }
+.z-2{ z-index: 2; }
+.z-3{ z-index: 3; }
+.z-4{ z-index: 4; }
+.z-5{ z-index: 5; }
+.z-6{ z-index: 6; }
+.z-7{ z-index: 7; }
+.z-8{ z-index: 8; }
+.z-9{ z-index: 9; }
+.z-10{ z-index: 10; }
+
+.opacity-0{ opacity: 0}
+.opacity-10{ opacity: .1}
+.opacity-20{ opacity: .2}
+.opacity-30{ opacity: .3}
+.opacity-40{ opacity: .4}
+.opacity-50{ opacity: .5}
+.opacity-60{ opacity: .6}
+.opacity-70{ opacity: .7}
+.opacity-80{ opacity: .8}
+.opacity-90{ opacity: .9}
+.opacity-100{ opacity: 1}
