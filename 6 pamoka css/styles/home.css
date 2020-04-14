@@ -79,12 +79,20 @@
 }
 
 .link-container__link {
-  height: 200px;
-  width: 200px;
+  height: 250px;
+  width: 250px;
+}
+
+.link-container__link:hover img,
+.link-container__link>img:hover {
+ transform: scale(1.2);
+ filter:  brightness(1) contrast(120%);
 }
 
 .link-container__link>img{
+  filter:  brightness(0.95);
   height: 100%;
   width: 100%;
   object-fit: cover;
+  transition: all .2s linear;
 }
