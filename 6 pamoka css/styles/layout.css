@@ -23,3 +23,21 @@
   clear: both;
   height: 5px;
 }
+
+.cover {
+  position: relative;
+  height: 100vh; /* vh - viewport height */
+  background: lightblue;
+  overflow: hidden;
+}
+
+.cover>img:first-of-type{
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
