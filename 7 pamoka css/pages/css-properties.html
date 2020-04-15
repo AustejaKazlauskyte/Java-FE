@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS properties</title>
+  <link rel="stylesheet" href="../styles/main.css">
+  <link rel="stylesheet" href="../styles/navbar.css">
+  <link rel="stylesheet" href="../styles/dimensions.css">
+  <link rel="stylesheet" href="../styles/typography.css">
+  <link rel="stylesheet" href="../styles/layout.css">
+  <link rel="stylesheet" href="../styles/css-properties-page.css">
+</head>
+
+<body>
+  <nav class="navbar">
+    <div class="container">
+      <div class="logo-container">
+        <img src="../img/logo.png" alt="codeAcademy logo" class="logo">
+      </div>
+      <ul class="links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="#box-model">Box Model</a></li>
+        <li><a href="#float">Float</a></li>
+        <li><a href="#position">Position</a></li>
+        <li><a href="#flex">Flex</a></li>
+        <li><a href="javascript.html">Javascript</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="anchor-fix" id="box-model">
+    <div class="container">
+      <div>
+        <h1>Box Model</h1>
+        <p>
+          In web development, the <strong>CSS box model</strong> refers to how HTML elements are modeled
+          in browser engines
+          and how dimension of those HTML elements are derived from CSS properties. It is a fundamental
+          concept for the composition of HTML webpages. The guidelines of the box model are described
+          by web standards World Wide Web Consortium (W3C) specifically the CSS Working Group. For much of
+          late-1990s and early 2000s there had been non-standard compliant implementations of the box
+          model in the mainstream browsers. With the advent of CSS2, which introduced the box-sizing
+          property, the problem had mostly been resolved.
+        </p>
+        <img class="w-100" src="../img/box-model.png" alt="Box model image">
+        <!-- Čia turi būti per vidurį išcentruotas paveiksliukas susijęs su BOX-MODEL -->
+      </div>
+      <hr>
+      <hr>
+      <div>
+        <h1>Box Model Pratybos</h1>
+        <h3>Sukurkite 60x60 pikselių dydžio kvadratus (bet kokios spalvos) kurie turėtų:</h3>
+        <ul>
+          <li>10px margin iš viršaus ir apačios</li>
+          <li>10px margin iš kairės</li>
+          <li>10px margin iš visų pusių, išskyrus dešinės</li>
+          <li>padding iš visų pusių po 10px</li>
+          <li>10px margin viršuje, 10px padding iš kairės ir apačios. Uždėkite mė sienelę</li>
+          <li>10px visose pusėsė, 10px padding viršuje ir apačioje</li>
+          <li>10px keirėje pusėsė, 10px padding dešinėje. Uždėkite mė sienelę.</li>
+        </ul>
+        <div class="square60x60 bg-red my"></div>
+        <div class="square60x60 bg-red mt ml mb"></div>
+        <div class="square60x60 bg-red ml p"></div><!-- Reikai užbaigti -->
+        <div class="square60x60 bg-red ml"></div><!-- Reikai užbaigti -->
+        <div class="square60x60 bg-red ml"></div><!-- Reikai užbaigti -->
+        <div class="square60x60 bg-red ml"></div><!-- Reikai užbaigti -->
+      </div>
+    </div>
+  </section>
+
+  <section class="anchor-fix" id="float">
+    <div class="container-wide">
+      <h1>Float</h1>
+      <div>
+        <img class="d300x300 float-left mr mb-2" src="../img/person-1.jfif" alt="girl one image">
+        <h3>Tristana Lego</h3>
+        <p class="text-justify mt-0">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam, sint facere quisquam excepturi velit numquam
+          id exercitationem fugiat repellat libero neque esse nam animi eius fugit adipisci totam cum doloremque sequi
+          magnam ea maiores pariatur provident. Possimus est sit provident minima placeat. Possimus deleniti in cumque
+          mollitia, maiores libero eius deserunt doloremque omnis atque molestiae, ut odit magnam nobis distinctio
+          impedit? Consequuntur perferendis aliquam veniam dicta doloremque iure ipsa qui natus animi tenetur
+          voluptates, unde illum asperiores cupiditate quisquam vel fugiat rem ducimus a nobis cum voluptatibus!
+          Veritatis, repellendus veniam? Tempora aliquid necessitatibus ipsam assumenda cumque. Incidunt laborum quaerat
+          repellendus.
+        </p>
+        <div class="clearfix"></div>
+      </div>
+      <div>
+        <img class="d300x300 float-right ml mb-3" src="../img/person-3.jfif" alt="guy one image">
+        <h3 class="text-right mt-0">Leo Kauchin</h3>
+        <p class="text-justify mt-0">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam, sint facere quisquam excepturi velit numquam
+          id exercitationem fugiat repellat libero neque esse nam animi eius fugit adipisci totam cum doloremque sequi
+          magnam ea maiores pariatur provident. Possimus est sit provident minima placeat. Possimus deleniti in cumque
+          mollitia, maiores libero eius deserunt doloremque omnis atque molestiae, ut odit magnam nobis distinctio
+          impedit? Consequuntur perferendis aliquam veniam dicta doloremque iure ipsa qui natus animi tenetur
+          voluptates, unde illum asperiores cupiditate quisquam vel fugiat rem ducimus a nobis cum voluptatibus!
+          Veritatis, repellendus veniam? Tempora aliquid necessitatibus ipsam assumenda cumque. Incidunt laborum quaerat
+          repellendus.
+        </p>
+        <div class="clearfix"></div>
+      </div>
+      <div>
+        <img class="d300x300 float-left mr mb" src="../img/person-2.jfif" alt="guy two image">
+        <img class="d300x300 float-right ml mb" src="../img/person-4.jfif" alt="guy two image">
+        <h3 class="text-center mt-0">Jessie and Ben Collibri</h3>
+        <p class="text-justify">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem qui dignissimos voluptatibus suscipit
+          magni neque optio quasi laborum culpa possimus. Repellendus aliquam illo alias cumque optio quidem delectus
+          similique minus eligendi a minima, quasi explicabo, sequi deleniti doloribus ex. Eligendi laudantium, culpa
+          impedit aliquam tenetur perferendis illum nostrum distinctio! Iste, minus? Suscipit unde quo rerum quidem et
+          eos nemo. Eaque consequatur aliquid voluptate doloribus earum maiores cupiditate numquam corporis rem adipisci
+          sapiente ad reprehenderit blanditiis, eligendi tempora! Molestiae, alias excepturi a quae quam necessitatibus
+          atque minus itaque aspernatur corporis natus soluta laudantium nulla veritatis quisquam ullam quasi tempora
+          nihil in? Sunt magni magnam molestiae delectus doloremque incidunt ipsa vero labore, perspiciatis totam
+          facilis sit praesentium sapiente alias quae, ratione nihil harum ea, enim nobis veniam doloribus! Temporibus
+          aperiam, consequuntur doloremque sint deleniti iusto, enim dolore soluta animi eius labore eveniet recusandae
+          nobis quae velit culpa? Alias natus ad ut nam?
+        </p>
+      </div>
+      <h3>Float panaudojimas norint panaikinti tarpą tarp nuotraukų</h3>
+      <img class="float-left w-50" src="../img/box-model.png" alt="">
+      <img class="float-left w-50" src="../img/box-model.png" alt="">
+      <div class="clearfix"></div>
+    </div>
+  </section>
+
+  <section class="anchor-fix" id="position">
+    <div class="container">
+      <h1>Position</h1>
+      <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/position" target="blank">Position dokumentacija ir
+        pavyzdys</a>
+      <div>
+        <h3>Static</h3>
+        <p>
+          Tai toks pozicionavimo būdas, kuomet elementai išdeliojami lotyniško teksto rašymo tvarka. Iš kairės į dešinę,
+          o kuomet elementai netelpa, persikelia į sekančią eilutę.
+        </p>
+        <div class="static-example">
+          <div class="square60x60 bg-red mb"></div>
+          <div class="square60x60 bg-red ml mb"></div>
+          <div class="square60x60 bg-red ml mb"></div>
+          <div class="square60x60 bg-red ml mb"></div>
+          <div class="square60x60 bg-red ml mb"></div>
+          <div class="square60x60 bg-red ml mb"></div>
+          <div class="square60x60 bg-red ml mb"></div>
+          <div class="square60x60 bg-red ml mb"></div>
+          <div class="square60x60 bg-red ml mb"></div>
+          <div class="square60x60 bg-red ml mb"></div>
+          <div class="square60x60 bg-red ml mb"></div>
+          <div class="square60x60 bg-red "></div>
+          <div class="square60x60 bg-red ml"></div>
+          <div class="square60x60 bg-red ml"></div>
+          <div class="square60x60 bg-red ml"></div>
+          <div class="square60x60 bg-red ml"></div>
+          <div class="square60x60 bg-red ml"></div>
+          <div class="square60x60 bg-red ml"></div>
+          <div class="square60x60 bg-red ml"></div>
+          <div class="square60x60 bg-red ml"></div>
+        </div>
+      </div>
+      <div>
+        <h3>Relative</h3>
+        <p>
+          Tai toks pozicionavimo būdas, kuomet elementas yra traktuojamas lyg static, tačiau gali būti paslinktas
+          naudojant CSS saybes: top, right, bottom, left. Naudojant šias savybes jis paslenkamas nuo jo menamos static
+          pozicijos.
+        </p>
+        <div class="relative-example">
+          <div class="square60x60 bg-red mb"></div>
+          <div class="square60x60 bg-red ml mb"></div>
+          <div class="square60x60 bg-red ml mb"></div>
+          <div class="square60x60 bg-red ml mb"></div>
+          <div class="square60x60 bg-red ml mb"></div>
+          <div class="square60x60 bg-blue ml mb text-center text-white font-size-sm pos-relative top-1">top: 1rem</div>
+          <div class="square60x60 bg-red ml mb"></div>
+          <div class="square60x60 bg-red ml mb"></div>
+          <div class="square60x60 bg-red ml mb"></div>
+          <div class="square60x60 bg-blue ml mb text-center text-white font-size-sm pos-relative left-1">left: 1rem
+          </div>
+          <div class="square60x60 bg-red ml mb"></div>
+          <div class="square60x60 bg-red"></div>
+          <div class="square60x60 bg-red ml"></div>
+          <div class="square60x60 bg-red ml"></div>
+          <div class="square60x60 bg-blue ml text-center text-white font-size-sm pos-relative right-1">right: 1rem</div>
+          <div class="square60x60 bg-red ml"></div>
+          <div class="square60x60 bg-red ml"></div>
+          <div class="square60x60 bg-blue ml text-center text-white font-size-sm pos-relative bottom-1">bottom: 1rem
+          </div>
+          <div class="square60x60 bg-red ml"></div>
+          <div class="square60x60 bg-red ml"></div>
+        </div>
+      </div>
+      <div>
+        <h3>Absolute</h3>
+        <p>
+          Tai toks pozicionavimo būdas, kuomet elementas ieško tėvinės hierarchijos šakoje pirmo sutikto <strong>ne
+            static</strong> elemento. Suradęs jį, atsispiria nuo jo kontūrų naudojant savybes: top, right, bottom, left.
+          Jeigu tėvinės hierarchijos šakoje neranda elemento su <strong>ne static</strong> pozicionavimu, atsispiria nuo
+          pradinio puslapio užkrovimo lango viewport'o.
+        </p>
+        <div class="absolute-example pos-relative">
+          <div class="pos-absolute pos-expand z-5">
+            <h1>Svarbus tekstas</h1>
+            <div class="square60x60 bg-green text-center text-white font-size-sm pos-absolute top-1 right-1">top, right
+            </div>
+            <div class="square60x60 bg-green text-center text-white font-size-sm pos-absolute left-1 bottom-1">bottom,
+              left</div>
+            <div class="square60x60 bg-red"></div>
+          </div>
+          <div class="bg-img pos-absolute pos-expand z-4 opacity-30">
+            <img src="../img/conference.jfif" alt="Conference image">
+            <!-- Klaidingo panaudojimo atveju, bus nerodoma -->
+            <img src="../img/html-hierarchy.gif" alt="Conference image">
+          </div>
+          <div class="bg-blue pos-absolute pos-expand z-3 opacity-30"></div>
+
+        </div>
+      </div>
+      <div>
+        <h3>Sticky</h3>
+        <p>
+          Tai toks pozicionavimo būdas, kuomet elementas ieško tėvinės hierarchijos šakoje pirmo sutikto
+          <strong>ne static</strong> elemento. Suradęs jį, atsispiria nuo jo kontūrų naudojant savybes: top, right,
+          bottom, left <strong>ir išlieka toje pačioje pozicijoje</strong>. Jeigu tėvinės hierarchijos šakoje neranda
+          elemento su <strong>ne static</strong> pozicionavimu, atsispiria <strong> ir išlieka</strong> toje pačioje
+          pozicijoje nuo pradinio puslapio užkrovimo lango viewport'o.
+        </p>
+        <div class="sticky-example">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam eveniet earum quasi dolorum error quaerat
+            magni delectus molestias, inventore odio minus! Facere, culpa accusantium praesentium sunt voluptas
+            consequatur dolor. Natus sed, sit doloribus corporis dolores quidem repudiandae architecto aut harum
+            veritatis ratione suscipit nobis distinctio soluta reprehenderit ducimus sunt facilis magnam amet ad! Animi
+            natus laboriosam neque temporibus odit ea recusandae commodi asperiores eveniet reiciendis nulla quaerat,
+            minima praesentium. Saepe hic magnam, at repudiandae possimus eum ad quos praesentium cum, quod temporibus
+            nesciunt porro a ut dolorum consequuntur velit corrupti in officiis doloremque accusantium ullam cumque
+            esse? Tempore iusto obcaecati unde nemo quia qui perspiciatis illum perferendis, voluptates at sequi
+            suscipit optio consequatur dignissimos, omnis non! Blanditiis tenetur doloribus suscipit asperiores hic fuga
+            alias sit delectus totam aut quae nihil impedit deserunt, laudantium quas reprehenderit quidem distinctio
+            repudiandae modi vero.
+          </p>
+          <div class="square60x60 bg-yellow text-center pos-sticky top-1">top 1rem</div>
+          <div class="square60x60 bg-yellow text-center pos-sticky bottom-1">bot 1rem</div>
+          <p>
+            Iusto pariatur consequuntur nesciunt quisquam amet ut praesentium repudiandae
+            voluptas vitae expedita repellendus itaque facere ullam dicta omnis assumenda ratione, saepe nostrum. Magni
+            pariatur hic, distinctio necessitatibus at, voluptas quidem error nulla possimus non sint. Pariatur ipsum
+            numquam sequi inventore harum qui blanditiis adipisci rem voluptates, debitis veritatis recusandae quisquam.
+            Laudantium, architecto cumque. Voluptatibus facilis nesciunt illum nam consectetur nihil porro ipsum
+            temporibus, eveniet sunt dolores laudantium reprehenderit vero! Laudantium voluptates maiores neque ipsum
+            ab. Culpa doloremque cumque labore quasi dolor optio totam illo veniam eum magni quo sunt corrupti ea amet
+            quisquam aliquam natus est quam itaque adipisci maxime iste consequuntur, quaerat provident! Quos aspernatur
+            quasi sed? Dolores obcaecati necessitatibus incidunt accusantium nobis consectetur aliquam quam magni
+            recusandae, porro eligendi saepe dolor molestiae tempore? Accusamus vero pariatur cumque harum facere amet
+            nam enim maxime iure maiores quasi perspiciatis ad ipsam voluptas aspernatur eligendi rem repudiandae
+            delectus officia sapiente, beatae itaque suscipit temporibus perferendis. Eius assumenda tenetur quo illo
+            nemo quos error modi est quisquam! Autem, magni repellat! Nobis expedita perferendis excepturi laborum
+            quidem modi cupiditate commodi eligendi et rem sapiente, harum dolorum, rerum deserunt placeat aliquid
+            tenetur saepe ut non. Exercitationem rem neque numquam enim! Veritatis ducimus recusandae in harum earum,
+            quas vitae praesentium a eaque! Iusto quas illo ipsum neque inventore magnam architecto error, totam
+            numquam, rerum impedit blanditiis nisi vel, dolores mollitia! Praesentium quibusdam consequuntur ratione
+            illo reiciendis? Cumque quia id nam, obcaecati aliquid cum eos omnis perferendis optio, deleniti sunt
+            tempore quibusdam molestiae accusantium fuga ad similique debitis sapiente sed veniam doloremque! Eligendi,
+            repellendus. Et, blanditiis.
+          </p>
+        </div>
+      </div>
+
+      <div>
+        <h3>Fixed</h3>
+        <p>
+          Tai toks pozicionavimo būdas, kuomet elementas ignoruoja HTML struktūros hierarchiją ir atsispiria nuo
+          viewport'o, naudojant savybes: top, right, bottom, left.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="anchor-fix" id="flex">
+    <div class="container">
+      <h1>Flex</h1>
+      <ul>
+        <li><a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" target="blank">Documentation</a></li>
+        <li><a href="https://flexbox.help/" target="blank">Examples to play with</a></li>
+      </ul>
+    </div>
+  </section>
+
+
+</body>
+
+</html>
