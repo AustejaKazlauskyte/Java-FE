@@ -1,26 +1,8 @@
 .grid-javascript-use-cases {
   display: grid;
   height: 100vh;
-  grid-template-columns: 100px auto 400px auto 150px 200px;
-  grid-template-rows: 100px 300px auto 200px;
+  grid-template-columns: auto 50px 150px 50px 2px 50px 150px 50px auto;
+  grid-template-rows: 90px 3fr 50px 150px 50px 2fr 50px 150px 50px 3fr ;
 }
 
-.test {
-  background: lemonchiffon;
-  grid-column: 3 / 5;
-  grid-row: 2/4;
-  order: 2;
-}
-
-.test2 {
-  background: lightcoral;
-  grid-column: 4 / 6;
-  grid-row: 3/5;
-  order: 3;
-}
-
-@media screen and (max-width: 580px) {
-  body {
-    background: red;
-  }
 }
