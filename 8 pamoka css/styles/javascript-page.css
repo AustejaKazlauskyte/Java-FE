@@ -10,9 +10,47 @@
 
 .card-content {
   justify-self: stretch;
-  background: #fffd;
+  background: #fffe;
   padding: 1rem;
   order: 2;
+}
+
+.card-content__date{
+  margin: 0;
+  text-transform: uppercase;
+  font-size: .5rem;
+  color: #444;
+  font-weight: 400;
+}
+
+.card-content__title{
+  text-transform: capitalize;
+  font-size: 1rem;
+  margin: .2rem 0 .5rem;
+}
+
+.card-content__decoration{
+  height: 4px;
+  width: 30%;
+  background: #111;
+}
+
+.card-content__text{
+  font-size: .7rem;
+  margin: .5rem 0 .6rem;
+}
+
+.card-content__link{
+  text-transform: uppercase;
+  font-size: .45rem;
+  color: #444;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+.card-content__link:hover{
+  text-decoration: underline;
+  color: #111;
 }
 
 .card-content--1 {
@@ -37,11 +75,14 @@
 }
 
 .card-img {
+  justify-self: stretch;
+  order: 1;
+}
+
+.card-img>img{
   height: 100%;
   width: 100%;
-  justify-self: stretch;
   object-fit: cover;
-  order: 1;
 }
 
 .card-img--1 {
@@ -89,6 +130,7 @@
 @media screen and (max-width: 720px) {
   
   .grid-javascript-use-cases {
+    background-image: radial-gradient(circle, #62625e, #585854, #4f4f4b, #454542, #3c3c39);
     grid-template-columns: auto [card-content-start-1 card-img-start-1 card-img-start-2 card-content-start-2]  440px [card-content-end-1 card-img-end-1 card-img-end-2 card-content-end-2] auto;
     grid-template-rows: 90px
     3fr [card-img-start-1 card-content-start-1] 10fr [card-img-end-1 card-content-end-1]
@@ -97,7 +139,6 @@
     1fr [card-img-start-4 card-content-start-4] 10fr [card-img-end-4 card-content-end-4]
     3fr;
   }
-  
 
   .card-img--1 { grid-row: card-img-start-1 / card-img-end-1; }
   .card-img--2 { grid-row: card-img-start-2 / card-img-end-2; }
@@ -108,12 +149,25 @@
   .card-content--3 { grid-row: card-content-start-3 / card-content-end-3}
   .card-content--4 { grid-row: card-content-start-4 / card-content-end-4}
 
+  .card-content{
+    background-image: linear-gradient(to right bottom, #ffd243, #fbcc39, #f7c62e, #f3c021, #efba0f);
+    border-radius: 4px;
+    box-shadow: 4px 6px 4px #000, -4px 0 4px #000;
+  }
+  .card-img {
+    display: none;
+  }
 }
 
 /* Galioja iki 480px */
-
 @media screen and (max-width: 480px) {
   .grid-javascript-use-cases {
-    background: lightsalmon;
+    grid-template-columns: auto [card-content-start-1 card-img-start-1 card-img-start-2 card-content-start-2] 280px [card-content-end-1 card-img-end-1 card-img-end-2 card-content-end-2] auto;
+    grid-template-rows: 90px
+    3fr [card-img-start-1 card-content-start-1] 10fr [card-img-end-1 card-content-end-1]
+    1fr [card-img-start-2 card-content-start-2] 10fr [card-img-end-2 card-content-end-2]
+    1fr [card-img-start-3 card-content-start-3] 10fr [card-img-end-3 card-content-end-3]
+    1fr [card-img-start-4 card-content-start-4] 10fr [card-img-end-4 card-content-end-4]
+    3fr;
   }
 }
