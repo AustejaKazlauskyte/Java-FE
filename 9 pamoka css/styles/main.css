@@ -1,0 +1,10 @@
+body {
+    margin: 0;
+}
+
+/* Visiems elementams {...} */
+
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
