@@ -1,0 +1,18 @@
+:root{
+  --white-color: #fff;
+  --dark-color: #363636;
+  --primary-color: #2800d8;
+  --secondary-color: #7a00cc;
+  --default-color: #adadad;
+
+  --white-color--darken: #f1f1f1;
+  --primary-color--darken: #1e00a5;
+  --secondary-color--darken: #590094;
+  --default-color--darken: #a0a0a0;
+
+  --primary-color--dark: #190188;
+  --secondary-color--dark: #4d0180;
+  --default-color--dark: #7e7e7e;
+
+  --dark-color--transparent: #36363625;
+}
