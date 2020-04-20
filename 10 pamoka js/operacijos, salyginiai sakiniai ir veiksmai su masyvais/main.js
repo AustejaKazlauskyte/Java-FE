@@ -1,7 +1,7 @@
 // Aritmetinės operacijos
 let a = 5;
 let b = 6;
-console.log({ a, b });                          // Gudrus spausdinimas išrašant kintamųjų pavadinimus
+console.log({ a, b });                               // Gudrus spausdinimas išrašant kintamųjų pavadinimus
 console.log('Add', a + b);                      // Sudėtis
 console.log('Subtract', a - b);                 // Atimtis
 console.log('Divide', a / b);                   // Dalyba
@@ -15,7 +15,7 @@ console.log('Decrement after execution', a--);  // Mažinimas vientu, po atspaus
 console.log('Decrement before execution', --b); // Mažinimas vienetu, prieš atspausdinimą (prieš įvykdant komandą)
 console.log('');                                // Tuščia eilutė
 
-// Aritmetinių operacijų trumpasis urašymas
+// // Aritmetinių operacijų trumpasis urašymas
 let c = 6;
 console.log('c =', c + ', a =', a);
 c += a; // c = c + a; Prie c esamos reikšmės pridėti a reikšmę 
@@ -31,7 +31,7 @@ c *= a; // c = c * a; c esamą reikšmę padauginti iš a
 console.log('c *= a arba c = c * a');
 console.log(c);
 
-// Loginės operacijos
+// // Loginės operacijos, operatoriai
 a = 1;
 b = true;
 console.log({ a, b });
@@ -44,7 +44,7 @@ console.log('a === b', a === b);  // Ar lygios reikšmės ir vienodi duomenų ti
 console.log('a != b', a != b);    // Ar NElygios reikšmės?
 console.log('a !== b', a !== b);  // Ar NElygios reikšmės ir vienodi duomenų tipai?
 
-// Loginiai operatoriai
+// // Loginiai operatoriai
 // || - OR - operatorius ARBA (Suma)
 let or = {
   'true || true': true || true,     // true
@@ -64,9 +64,10 @@ console.table(or);
 console.log('Operatorius AND - &&');
 console.table(and);
 
-// Salygos sakiniai
+// // Salygos sakiniai
 // let isFemale = confirm('Labas, ar Jūs esate moteris?')
 let age = prompt('Kiek jums metų?');
+// let isFemale = true;
 
 // Ažiaus ir lyties validacija
 // if (!isNaN(age)) {
@@ -81,6 +82,7 @@ let age = prompt('Kiek jums metų?');
 //       }
 //     }
 //   } else {
+
 //     if (age >= 23 && age <= 34) {
 //       console.log('Tu ateik į pasimatymą :)');
 //     } else {
@@ -95,8 +97,7 @@ let age = prompt('Kiek jums metų?');
 //   alert('Blogai įvedėte amžių');
 // }
 
-// Tęstiniai salygos sakiniai
-
+// // Tęstiniai salygos sakiniai
 if (age < 0) {
   console.log('Tu dar negimęs/us');
 } else if (age < 6) {
@@ -116,11 +117,11 @@ if (age < 0) {
 } else if (age < 100) {
   console.log('Ar žmonės užleidžia vietą troleibuse?');
 } else {
-  console.log('Tu tikriausiai rekordininkas/ė!');
-} 
+  console.log('Vampyru kvartalas kitoje pusėje!');
+}
 
 let today = new Date(); // JS gamyklinė funkcija, dabartinei datai gauti
-let weekDay = today.getDay(); // getDay() metodo pagalba, gauname šiandienos savaitės today
+let weekDay = today.getDay(); // getDay() metodo pagalba, gauname šiandienos savaitės dieną
 
 if (weekDay === 1) {
   console.log('Pirmadienis');
@@ -140,7 +141,7 @@ if (weekDay === 1) {
   console.log('Grįšk į Kentauro Proksimą');
 }
 
-switch (weekDay) {
+switch (true) {
   case 1: console.log('Pirmadienis'); break;
   case 2: console.log('Antradienis'); break;
   case 3: console.log('Trečiadienis'); break;
@@ -151,86 +152,154 @@ switch (weekDay) {
   default: console.log('Grįžk į Kentauro Proximą');
 }
 
-//---------------------------------Veiksmai su masyvais---------------------------------
-console.log('------------------Veiksmai su masyvais------------------');
-const numArray = [1, 2, 3, 4, 5, 6, 7];
-const stringArray = ['.', ',', 'buvo', 'graži', 'diena', 'naktį', 'laiškas',
- 'gavo', 'draugė', 'laiškininkas', 'obuolį', 'suvalgė', 'bebriukai', 'šunį',  'pavogė'];
+let obuoliai = [
+  {
+    sunokes: true,
+    pernokes: false,
+    rusis: 'alyvinis'
+  }, {
+    sunokes: true,
+    pernokes: true,
+    rusis: 'kita'
+  }, {
+    sunokes: true,
+    pernokes: true,
+    rusis: 'saldinis'
+  }, {
+    sunokes: true,
+    pernokes: false,
+    rusis: 'alyvinis'
+  }, {
+    sunokes: true,
+    pernokes: true,
+    rusis: 'saldinis'
+  }, {
+    sunokes: false,
+    pernokes: true,
+    rusis: 'saldinis'
+  }, {
+    sunokes: true,
+    pernokes: false,
+    rusis: 'alyvinis'
+  }, {
+    sunokes: true,
+    pernokes: false,
+    rusis: 'kita'
+  }, {
+    sunokes: true,
+    pernokes: true,
+    rusis: 'kita'
+  }
+];
 
- console.log('Pradinis masyvas');
- console.log(numArray);
- // Įdėti į galą:
- numArray.push(8);
- console.log('numArray.push(8):', numArray);
- // Išimti iš galo:
- let lastEl = numArray.pop();
- console.log('numArray.pop():', numArray);
- console.log({lastEl});
- // Įdėti į priekį:
- numArray.unshift(0);
- console.log('numArray.unshift(0):', numArray);
- // Išimti iš priekio:
- let firstEl = numArray.shift();
- console.log('numArray.shift(0):', numArray);
- console.log({firstEl});
+let alyviniai = [];
+let saldiniai = [];
+let kita = [];
+let nedanoke = [];
+let pernoke = [];
 
-// Masyvo pjūvis - (kopija)
-// slice(p, b); Šis metodas niekaip NEKEIČIA pradio masyvo
-// p - Nuo kurio elemento ĮSKAITANT
-// b - Iki kurio elemento NEĮSKAITANT
-let numArraySlice = numArray.slice(2, 4);
-let numArrayFullSlice = numArray.slice();
-let numArrayBackSlice = numArray.slice(-4);
-console.log(numArrayFullSlice);
-console.log(numArraySlice);
-console.log(numArrayBackSlice);
+for (let i = 0; i < obuoliai.length; i++) {
+  const obuolys = obuoliai[i];
+  if (!obuolys.sunokes) {
+    nedanoke.push(obuolys);
+  } else if (obuolys.pernokes) {
+    pernoke.push(obuolys);
+  } else if (obuolys.rusis === 'saldinis') {
+    saldiniai.push(obuolys);
+  } else if (obuolys.rusis === 'alyvinis') {
+    alyviniai.push(obuolys);
+  } else {
+    kita.push(obuolys);
+  }
+}
+console.log({
+  alyviniai,
+  saldiniai,
+  kita,
+  nedanoke,
+  pernoke
+});
 
-// Masyvo išpjova
-// splice(p, b, r1, r2, ..., rn); Šis metodaskeičia pradinio masyvo duomenis (išpjauna segmentą)
-// p - Nuo kurio elemento ĮSKAITANT // Jeigu nenurodyta - Nuo pradžios
-// b - Kiek elementų pašalinti      // Jeigu nenurodyta - Iki galo
-// r1, r2, ..., rn - Kuom pakeisti išpjautą dalį
+// //---------------------------------Veiksmai su masyvais---------------------------------
+// console.log('------------------Veiksmai su masyvais------------------');
+// const numArray = [1, 2, 3, 4, 5, 6, 7];
+// const stringArray = ['.', ',', 'buvo', 'graži', 'diena', 'naktį', 'laiškas',
+//  'gavo', 'draugė', 'laiškininkas', 'obuolį', 'suvalgė', 'bebriukai', 'šunį',  'pavogė'];
 
-console.log('Pradinis masyvas', numArray);
+//  console.log('Pradinis masyvas');
+//  console.log(numArray);
+//  // Įdėti į galą:
+//  numArray.push(8);
+//  console.log('numArray.push(8):', numArray);
+//  // Išimti iš galo:
+//  let lastEl = numArray.pop();
+//  console.log('numArray.pop():', numArray);
+//  console.log({lastEl});
+//  // Įdėti į priekį:
+//  numArray.unshift(0);
+//  console.log('numArray.unshift(0):', numArray);
+//  // Išimti iš priekio:
+//  let firstEl = numArray.shift();
+//  console.log('numArray.shift(0):', numArray);
+//  console.log({firstEl});
 
-// Duomenų pridėjimui
-console.log('Pridedame vieną nuo indekso 2: -5');
-numArray.splice(2, 0, -5);
-console.log('Skaičių masyvas', numArray);
+// // Masyvo pjūvis - (kopija)
+// // slice(p, b); Šis metodas niekaip NEKEIČIA pradio masyvo
+// // p - Nuo kurio elemento ĮSKAITANT
+// // b - Iki kurio elemento NEĮSKAITANT
+// let numArraySlice = numArray.slice(2, 4);
+// let numArrayFullSlice = numArray.slice();
+// let numArrayBackSlice = numArray.slice(-4);
+// console.log(numArrayFullSlice);
+// console.log(numArraySlice);
+// console.log(numArrayBackSlice);
 
-console.log('Pridedame kelis nuo indekso 2: -5, 6, 2')
-numArray.splice(2, 0, -5, 6, 2);
-console.log('Skaičių masyvas', numArray);
+// // Masyvo išpjova
+// // splice(p, b, r1, r2, ..., rn); Šis metodaskeičia pradinio masyvo duomenis (išpjauna segmentą)
+// // p - Nuo kurio elemento ĮSKAITANT // Jeigu nenurodyta - Nuo pradžios
+// // b - Kiek elementų pašalinti      // Jeigu nenurodyta - Iki galo
+// // r1, r2, ..., rn - Kuom pakeisti išpjautą dalį
 
-console.log('Pridedame segmentą į galą: [-2, 2, 2]')
-numArray.splice(numArray.length, 0, ...[-2, 2, 2]);
-console.log('Skaičių masyvas', numArray);
+// console.log('Pradinis masyvas', numArray);
 
-// Duomenų pakeitimui
-console.log('Vietoj elemento indeksu 3, įdedame: -9');
-numArray.splice(3, 1, -9);
-console.log('Skaičių masyvas', numArray);
+// // Duomenų pridėjimui
+// console.log('Pridedame vieną nuo indekso 2: -5');
+// numArray.splice(2, 0, -5);
+// console.log('Skaičių masyvas', numArray);
 
-// Duomenų išpjovimui
-console.log('Išpjauname iš pradžios 5 elementus');
-let firstFive = numArray.splice(0, 5);
-console.log('Skaičių masyvas', numArray);
-console.log({firstFive});
+// console.log('Pridedame kelis nuo indekso 2: -5, 6, 2')
+// numArray.splice(2, 0, -5, 6, 2);
+// console.log('Skaičių masyvas', numArray);
 
-console.log('Išpjauname iš galo 5 elementus');
-let lastFive = numArray.splice(-5, 5);
-console.log('Skaičių masyvas', numArray);
-console.log({lastFive});
+// console.log('Pridedame segmentą į galą: [-2, 2, 2]')
+// numArray.splice(numArray.length, 0, ...[-2, 2, 2]);
+// console.log('Skaičių masyvas', numArray);
 
-// Duomenų ištrinimas
-console.log('Elemento indeksu 2 ištrinimas');
-numArray.splice(2, 1);
-console.log('Skaičių masyvas', numArray);
+// // Duomenų pakeitimui
+// console.log('Vietoj elemento indeksu 3, įdedame: -9');
+// numArray.splice(3, 1, -9);
+// console.log('Skaičių masyvas', numArray);
+
+// // Duomenų išpjovimui
+// console.log('Išpjauname iš pradžios 5 elementus');
+// let firstFive = numArray.splice(0, 5);
+// console.log('Skaičių masyvas', numArray);
+// console.log({firstFive});
+
+// console.log('Išpjauname iš galo 5 elementus');
+// let lastFive = numArray.splice(-5, 5);
+// console.log('Skaičių masyvas', numArray);
+// console.log({lastFive});
+
+// // Duomenų ištrinimas
+// console.log('Elemento indeksu 2 ištrinimas');
+// numArray.splice(2, 1);
+// console.log('Skaičių masyvas', numArray);
 
 
-// Duomenų iš galo perkėlimas į priekį
-console.log('Paskutinių dviejų išpjovimas iš galo ir pridėjimas į priekį');
-numArray.splice(0, 0, ...numArray.splice(-2, 2));
+// // Duomenų iš galo perkėlimas į priekį
+// console.log('Paskutinių dviejų išpjovimas iš galo ir pridėjimas į priekį');
+// numArray.splice(0, 0, ...numArray.splice(-2, 2));
 
 
 

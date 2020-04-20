@@ -1,0 +1,2 @@
+Aplanke "operacijos, salyginiai sakiniai ir veiksmai su masyvais" išnagrinėti užkomentuotą kodą ir pasiruošti klausimus sekančiai pamokai
+Atlikti užduotis aplanke "nd - objektai/main.js"
