@@ -220,86 +220,86 @@ console.log({
   pernoke
 });
 
-// //---------------------------------Veiksmai su masyvais---------------------------------
-// console.log('------------------Veiksmai su masyvais------------------');
-// const numArray = [1, 2, 3, 4, 5, 6, 7];
-// const stringArray = ['.', ',', 'buvo', 'graži', 'diena', 'naktį', 'laiškas',
-//  'gavo', 'draugė', 'laiškininkas', 'obuolį', 'suvalgė', 'bebriukai', 'šunį',  'pavogė'];
+//---------------------------------Veiksmai su masyvais---------------------------------
+console.log('------------------Veiksmai su masyvais------------------');
+const numArray = [1, 2, 3, 4, 5, 6, 7];
+const stringArray = ['.', ',', 'buvo', 'graži', 'diena', 'naktį', 'laiškas',
+ 'gavo', 'draugė', 'laiškininkas', 'obuolį', 'suvalgė', 'bebriukai', 'šunį',  'pavogė'];
 
-//  console.log('Pradinis masyvas');
-//  console.log(numArray);
-//  // Įdėti į galą:
-//  numArray.push(8);
-//  console.log('numArray.push(8):', numArray);
-//  // Išimti iš galo:
-//  let lastEl = numArray.pop();
-//  console.log('numArray.pop():', numArray);
-//  console.log({lastEl});
-//  // Įdėti į priekį:
-//  numArray.unshift(0);
-//  console.log('numArray.unshift(0):', numArray);
-//  // Išimti iš priekio:
-//  let firstEl = numArray.shift();
-//  console.log('numArray.shift(0):', numArray);
-//  console.log({firstEl});
+ console.log('Pradinis masyvas');
+ console.log(numArray);
+ // Įdėti į galą:
+ numArray.push(8);
+ console.log('numArray.push(8):', numArray);
+ // Išimti iš galo:
+ let lastEl = numArray.pop();
+ console.log('numArray.pop():', numArray);
+ console.log({lastEl});
+ // Įdėti į priekį:
+ numArray.unshift(0);
+ console.log('numArray.unshift(0):', numArray);
+ // Išimti iš priekio:
+ let firstEl = numArray.shift();
+ console.log('numArray.shift(0):', numArray);
+ console.log({firstEl});
 
-// // Masyvo pjūvis - (kopija)
-// // slice(p, b); Šis metodas niekaip NEKEIČIA pradio masyvo
-// // p - Nuo kurio elemento ĮSKAITANT
-// // b - Iki kurio elemento NEĮSKAITANT
-// let numArraySlice = numArray.slice(2, 4);
-// let numArrayFullSlice = numArray.slice();
-// let numArrayBackSlice = numArray.slice(-4);
-// console.log(numArrayFullSlice);
-// console.log(numArraySlice);
-// console.log(numArrayBackSlice);
+// Masyvo pjūvis - (kopija)
+// slice(p, b); Šis metodas niekaip NEKEIČIA pradio masyvo
+// p - Nuo kurio elemento ĮSKAITANT
+// b - Iki kurio elemento NEĮSKAITANT
+let numArraySlice = numArray.slice(2, 4);
+let numArrayFullSlice = numArray.slice();
+let numArrayBackSlice = numArray.slice(-4);
+console.log(numArrayFullSlice);
+console.log(numArraySlice);
+console.log(numArrayBackSlice);
 
-// // Masyvo išpjova
-// // splice(p, b, r1, r2, ..., rn); Šis metodaskeičia pradinio masyvo duomenis (išpjauna segmentą)
-// // p - Nuo kurio elemento ĮSKAITANT // Jeigu nenurodyta - Nuo pradžios
-// // b - Kiek elementų pašalinti      // Jeigu nenurodyta - Iki galo
-// // r1, r2, ..., rn - Kuom pakeisti išpjautą dalį
+// Masyvo išpjova
+// splice(p, b, r1, r2, ..., rn); Šis metodaskeičia pradinio masyvo duomenis (išpjauna segmentą)
+// p - Nuo kurio elemento ĮSKAITANT // Jeigu nenurodyta - Nuo pradžios
+// b - Kiek elementų pašalinti      // Jeigu nenurodyta - Iki galo
+// r1, r2, ..., rn - Kuom pakeisti išpjautą dalį
 
-// console.log('Pradinis masyvas', numArray);
+console.log('Pradinis masyvas', numArray);
 
-// // Duomenų pridėjimui
-// console.log('Pridedame vieną nuo indekso 2: -5');
-// numArray.splice(2, 0, -5);
-// console.log('Skaičių masyvas', numArray);
+// Duomenų pridėjimui
+console.log('Pridedame vieną nuo indekso 2: -5');
+numArray.splice(2, 0, -5);
+console.log('Skaičių masyvas', numArray);
 
-// console.log('Pridedame kelis nuo indekso 2: -5, 6, 2')
-// numArray.splice(2, 0, -5, 6, 2);
-// console.log('Skaičių masyvas', numArray);
+console.log('Pridedame kelis nuo indekso 2: -5, 6, 2')
+numArray.splice(2, 0, -5, 6, 2);
+console.log('Skaičių masyvas', numArray);
 
-// console.log('Pridedame segmentą į galą: [-2, 2, 2]')
-// numArray.splice(numArray.length, 0, ...[-2, 2, 2]);
-// console.log('Skaičių masyvas', numArray);
+console.log('Pridedame segmentą į galą: [-2, 2, 2]')
+numArray.splice(numArray.length, 0, ...[-2, 2, 2]);
+console.log('Skaičių masyvas', numArray);
 
-// // Duomenų pakeitimui
-// console.log('Vietoj elemento indeksu 3, įdedame: -9');
-// numArray.splice(3, 1, -9);
-// console.log('Skaičių masyvas', numArray);
+// Duomenų pakeitimui
+console.log('Vietoj elemento indeksu 3, įdedame: -9');
+numArray.splice(3, 1, -9);
+console.log('Skaičių masyvas', numArray);
 
-// // Duomenų išpjovimui
-// console.log('Išpjauname iš pradžios 5 elementus');
-// let firstFive = numArray.splice(0, 5);
-// console.log('Skaičių masyvas', numArray);
-// console.log({firstFive});
+// Duomenų išpjovimui
+console.log('Išpjauname iš pradžios 5 elementus');
+let firstFive = numArray.splice(0, 5);
+console.log('Skaičių masyvas', numArray);
+console.log({firstFive});
 
-// console.log('Išpjauname iš galo 5 elementus');
-// let lastFive = numArray.splice(-5, 5);
-// console.log('Skaičių masyvas', numArray);
-// console.log({lastFive});
+console.log('Išpjauname iš galo 5 elementus');
+let lastFive = numArray.splice(-5, 5);
+console.log('Skaičių masyvas', numArray);
+console.log({lastFive});
 
-// // Duomenų ištrinimas
-// console.log('Elemento indeksu 2 ištrinimas');
-// numArray.splice(2, 1);
-// console.log('Skaičių masyvas', numArray);
+// Duomenų ištrinimas
+console.log('Elemento indeksu 2 ištrinimas');
+numArray.splice(2, 1);
+console.log('Skaičių masyvas', numArray);
 
 
-// // Duomenų iš galo perkėlimas į priekį
-// console.log('Paskutinių dviejų išpjovimas iš galo ir pridėjimas į priekį');
-// numArray.splice(0, 0, ...numArray.splice(-2, 2));
+// Duomenų iš galo perkėlimas į priekį
+console.log('Paskutinių dviejų išpjovimas iš galo ir pridėjimas į priekį');
+numArray.splice(0, 0, ...numArray.splice(-2, 2));
 
 
 

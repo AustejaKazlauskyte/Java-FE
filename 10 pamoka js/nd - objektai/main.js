@@ -60,3 +60,96 @@ console.log('---------------------- Užduotys ----------------------');
 // 9. Sukurkite dar vieną seniūniją. Į pirmają įdėkite 2 žmones, o į antrają vieną
 // 10. Sukurkite miesto su savybėmis: pavadinimas, seniūnijos(tuščias masyvas)
 // 11 Priskirkite miestui seniūnijas.
+
+// Galutinė struktūra
+const city = {
+  title: 'Vilnius',
+  elderships: [
+    {
+      title: 'Saulėtekio seniūnija',
+      members: [
+        {
+          name: "Petras",
+          surname: 'Petraitis',
+          age: 25,
+          books: [
+            {
+              title: 'Peizažas',
+              author: 'Motiejus Tolimauskas',
+              year: '2002',
+              genre: 'Grožinė litaratūra'
+            },
+            {
+              title: 'Saulėlydis',
+              author: 'Santanas Kurpavičius',
+              year: '2001',
+              genre: 'Grožinė litaratūra'
+            },
+            {
+              title: 'Marijonetė',
+              author: 'Teatrauskas Vaidenis',
+              year: '2005',
+              genre: 'Grožinė litaratūra'
+            }
+          ]
+        },
+        {
+          name: "Juozas",
+          surname: 'Juozaitis',
+          age: 35,
+          books: [
+            {
+              title: 'Gyvenimo sprendimas',
+              author: 'Čilas Belenkauskas',
+              year: '2002',
+              genre: 'Autobiografinė literatūra'
+            },
+            {
+              title: 'Erelė',
+              author: 'Strėlė Lankauskaitė',
+              year: '2017',
+              genre: 'Autobiografinė literatūra'
+            },
+            {
+              title: 'Keptuvės ir samčiai',
+              author: 'Puodas Krosnelis',
+              year: '2005',
+              genre: 'Autobiografinė literatūra'
+            }
+          ]
+        },
+      ]
+    },
+    {
+      title: 'Centro seniūnija',
+      members: [
+        {
+          name: "Saulius",
+          surname: 'Saulaitis',
+          age: 46,
+          books: [
+            {
+              title: 'Kinematika',
+              author: 'Skaitenis Kritauskas',
+              year: '1998',
+              genre: 'Mokslinė literatūra'
+            },
+            {
+              title: 'Matematika',
+              author: 'Skaičius Sandauga',
+              year: '2001',
+              genre: 'Mokslinė literatūra'
+            },
+            {
+              title: 'Chemikalai',
+              author: 'Chemstva Polimeraitė',
+              year: '2005',
+              genre: 'Mokslinė literatūra'
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+console.log(city);
