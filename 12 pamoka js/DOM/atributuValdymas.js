@@ -1,7 +1,6 @@
-let inputName = document.querySelector('.js-input-name');
-let btnName = document.querySelector('.js-btn-name');
-let containerResult = document.querySelector('.js-result');
-let counterPrintName = 0; // darbinis kintamasis 'printName' funkcijai
+let inputNames = document.querySelectorAll('.js-input-name');
+let btnNames = document.querySelectorAll('.js-btn-name');
+let containerResults = document.querySelectorAll('.js-result');
 
 // ------------------------ Event listener ---------------
 // addEventListener dokumentacija  - https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener
@@ -9,22 +8,28 @@ let counterPrintName = 0; // darbinis kintamasis 'printName' funkcijai
 // Event listener - tai toks JS mechanizmas kuris vykdo funkciją, įvykus įvykiui
 
 // -------------------- Laukelio spausdinimas į kitą konteinerį ----------------------------
-function printName() {
-  counterPrintName++; // Kiekviena kart įvykus funkcijai didiname darbinį kintamajį
-  if (counterPrintName > 5) {
-    btnName.removeEventListener('click', printName);
+function printName(event) {
+  event.target.counter++; // Kiekviena kart įvykus funkcijai didiname darbinį kintamajį
+  if (event.target.counter > 5) {
+    event.target.removeEventListener('click', printName);
     // inputName yra <input ...> kintamasis, jis neturi innerHTML savybės. Jo turinys saugomas savybėje(property) 'value'
-    inputName.value = 'Daugiau nebegalite spausti';
+    inputNames[event.target.index].value = '';
+    containerResults[event.target.index].innerHTML = 'Daugiau nebegalite spausti'
     //                        ↓ - atributo pavadinimas        
-    inputName.setAttribute('readonly', true);
+    inputNames[event.target.index].setAttribute('readonly', true);
     // ↑ - kokiam elementui             ↑ - atributo reikšmė
   } else {
-    containerResult.innerHTML = inputName.value;
+    containerResults[event.target.index].innerHTML = inputNames[event.target.index].value;
   }
 }
-// ↓ - kokiam elementui;    ↓ - Kokiam įvykiui įvykus
-btnName.addEventListener('click', printName);
-//            ↑ - mechanizmas kuris rūpinasi klausymu;    ↑ - kokia funkcija bus vykdoma įvykus įvykiui
+
+btnNames.forEach((btnName, i) => {
+  btnName.counter = 0;
+  btnName.index = i;
+  // ↓ - kokiam elementui;    ↓ - Kokiam įvykiui įvykus
+  btnName.addEventListener('click', printName); // <- kokia funkcija bus vykdoma įvykus įvykiui
+  //            ↑ - mechanizmas kuris rūpinasi įvykių klausymu;    
+})
 
 // ------------------------------- Spalvų žaismas ------------------------------
 
@@ -95,7 +100,8 @@ function decRectangleSize() {
 
 panelIncSize.addEventListener('mousemove', incRectangleSize);
 panelDecSize.addEventListener('mousemove', decRectangleSize);
-btnSizeMax.addEventListener('click', function () {
+
+btnSizeMax.addEventListener('click', () => { 
   let containerWidth = actualWidth(containerMain);
   rectangleSize.style.width = containerWidth + 'px';
   rectangleSize.style.height = containerWidth + 'px';
@@ -105,4 +111,3 @@ btnSizeMin.addEventListener('click', function () {
   rectangleSize.style.width = '50px';
   rectangleSize.style.height = '50px';
 });
-
