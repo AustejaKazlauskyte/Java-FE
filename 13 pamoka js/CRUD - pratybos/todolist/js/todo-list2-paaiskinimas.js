@@ -3,7 +3,7 @@ const taskContainer = document.querySelector("ul"); // Pasirenkame elementą - <
 const btnAdd = document.querySelector("input[type=submit]"); // Pasirenkame elementa <input type="submit">
 const inputText = document.querySelector("input[type=text]"); // Pasirenkame elementa <input type="text">
 // Kintamasis, kurti naujų objektų savybės 'id' unikalioms reikšmėms
-let newId = tasks.length; // Pirmnio užkrovimo metu, id priskiriamas masyvo ilgiui (elementų skaičiui) 
+let newId = tasks.length; // Pirminio užkrovimo metu, id priskiriamas masyvo ilgiui (elementų skaičiui) 
 
 // -------------------------------- Functions --------------------------------
 // Sąrašo generavimo pagal masyvą 'tasks' funkcija. Naudojama po betkokio duomenų pakeitimo masyve 'tasks'
