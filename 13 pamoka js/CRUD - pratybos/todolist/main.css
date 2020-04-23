@@ -1,0 +1,152 @@
+/* '*' - visi elementai  */
+* {
+  box-sizing: border-box; /* dydis suvokiamas sulyg sienele*/
+}
+
+/* Pasirenka elementus su  klase clearfix */
+.clearfix {
+  clear: both;
+}
+
+/* pasirenka pirmajį turinio elementą */
+body {
+  background: url(img/bg.jpg);
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+/* Elementams su klase .todo-container */
+.todo-container {
+  display: block;
+  margin: 100px auto 0;
+  width: 400px;
+  background: rgba(255, 255, 255, 0.863);
+  padding: 1rem;
+  border-radius: 7px;
+  box-shadow: 8px 8px 16px #000;
+}
+
+/* Pasirenka pagrindinę antraštę */
+.header-main {
+  text-align: center;
+  color: #05441c;
+}
+
+/* input elementams su type="text "*/
+input[type="text"] {
+  display: block; /* užims visą tėvo plotį*/
+  padding: 5px; /* tuščia vieta aplink turinį - kamšalas*/
+  border: 1px solid #05441c;
+  border-right: none;
+  border-radius: 4px 0 0 4px;
+  width: calc(100% - 60px);
+  height: 40px;
+}
+
+/* input elementams su type="submit "*/
+input[type="submit"] {
+  border-radius: 0 4px 4px 0;
+  float: right;
+  width: 60px;
+  border: 1px solid #05441c;
+  border-left: none;
+  height: 40px;
+  background: #0a642b;
+  color: #ddd;
+}
+
+/* Užvedus pelytę ant <input> elementų su atributu type="submit "*/
+input[type="submit"]:hover {
+  background: #05441c;
+  color: #eee;
+  cursor: pointer;
+}
+
+/* Pasirinkus <input> elementą "*/
+input:focus {
+  outline: none;
+  border: 1px solid #05441c;
+  box-shadow: inset 1px 1px #05441c, inset -1px -1px #05441c;
+}
+
+/* Elementams <ul> */
+ul {
+  margin-top: 0;
+  list-style: none;
+  padding-left: 0;
+}
+
+/* Elementams <li> */
+li {
+  padding: 5px;
+  text-align: right;
+  height: 35px;
+  line-height: 25px;
+}
+
+/* Pasirenka visus <li> elementus išskyrus paskutinį */
+li:not(:last-child) {
+  border-bottom: 0.5px solid #bbb;
+}
+
+/* Pasirenka kas antrą <li> elementą */
+li:nth-child(2n) {
+  background: #bcd8c971;
+}
+
+/* Elementams su klase todo-title */
+.todo-title {
+  display: block;
+  float: left;
+}
+
+/* Elementams kurie turi klasę task-done */
+.task-done {
+  text-decoration: line-through;
+}
+
+/* Elementams <span>, <div>, <button>, <a> su klase .btn - class="...btn..." */
+span.btn:hover,
+div.btn:hover,
+button.btn:hover,
+a.btn:hover {
+  cursor: pointer;
+  color: #fff;
+  box-shadow: inset 1px 1px 0 #fff, inset -1px -1px 0 #fff;
+  transform: scale(1.1);
+}
+
+/* Savybės visiems mygtukams */
+.btn {
+  display: inline-block; /* */
+  width: 25px;
+  height: 25px;
+  text-align: center;
+  line-height: 15px; /* line-height = height - padding-top - padding-bottom */
+  border-radius: 3px;
+  padding: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Savybės tik elementam su btn-complete klase */
+.btn-complete {
+  border: 1px solid #05441c;
+  color: #05441c;
+}
+
+/* Užvedus ant elementų su klase .btn-complete */
+.btn-complete:hover {
+  background: #05441c;
+}
+
+/* Savybės tik elementam su btn-delete klase */
+.btn-delete {
+  border: 1px solid #440505;
+  color: #440505;
+}
+/* Užvedus ant elementų su klase .btn-delete */
+.btn-delete:hover {
+  background: #440505;
+}
