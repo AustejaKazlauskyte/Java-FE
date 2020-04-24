@@ -1,60 +1,69 @@
-html{
+html {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-*{
+* {
   box-sizing: border-box;
 }
-body{
+
+body {
   margin: 0;
 }
 
-.container{
+.container {
   width: 1200px;
   margin: auto;
 }
 
-.heading-error{
+.heading-error {
   color: darkred;
   font-size: 2rem;
   margin: 3rem 0;
   text-align: center;
 }
 
-
-.list-todo__header{
+.list-todo__header {
   font-weight: 700;
 }
 
-hr.list-todo__header-line{
+hr.list-todo__header-line {
   border: 1px solid darkred;
   margin: 0;
 }
 
-.list-todo__row:nth-of-type(2n){
+.list-todo__row:nth-of-type(2n) {
   background: rgba(139, 0, 0, 0.02);
 }
 
-.list-todo__header,
-.list-todo__row{
+.list-todo__header, .list-todo__row {
   display: flex;
   justify-content: space-between;
   padding: .75rem;
-  
 }
 
-.list-todo__header>*,
-.list-todo__row>*{
-  width:24%;
+.list-todo__header>*:nth-child(1), .list-todo__row>*:nth-child(1) {
+  width: 10%;
 }
 
-.navigation-todo{
+.list-todo__header>*:nth-child(2), .list-todo__row>*:nth-child(2) {
+  width: 10%;
+}
+
+.list-todo__header>*:nth-child(3), .list-todo__row>*:nth-child(3) {
+  width: 60%;
+}
+
+.list-todo__header>*:nth-child(4), .list-todo__row>*:nth-child(4) {
+  width: 20%;
+}
+
+.navigation-todo {
   margin-top: 2rem;
   display: flex;
   justify-content: center;
 }
 
-.navigation-todo>*{
+.navigation-todo>* {
   margin: 0 1rem;
   vertical-align: top;
   width: 3rem;
@@ -66,38 +75,38 @@ hr.list-todo__header-line{
   font-weight: 700;
 }
 
-.navigation-todo__btn{
+.navigation-todo__btn {
   background: white;
   border-radius: 4px;
   color: darkred;
   border: 2px solid darkred;
   cursor: pointer;
-  box-shadow: 0 0 4px 1px rgba(51, 51, 51, 0.116) ;
+  box-shadow: 0 0 4px 1px rgba(51, 51, 51, 0.116);
 }
 
-.navigation-todo__btn:hover:not(.muted):not(.active){
+.navigation-todo__btn:hover:not(.muted):not(.active) {
   background: rgba(139, 0, 0, 0.041);
-  box-shadow: 0 0 4px 1px rgba(51, 51, 51, 0.253) ;
+  box-shadow: 0 0 4px 1px rgba(51, 51, 51, 0.253);
 }
 
-.navigation-todo__btn.active{
+.navigation-todo__btn.active {
   background: darkred;
   color: white;
 }
 
-.navigation-todo__btn.active:hover{
+.navigation-todo__btn.active:hover {
   border-color: black;
-  box-shadow: 0 0 4px 1px rgba(51, 51, 51, 0.253) ;
+  box-shadow: 0 0 4px 1px rgba(51, 51, 51, 0.253);
 }
 
-.navigation-todo__btn.muted{
+.navigation-todo__btn.muted {
   background: rgb(199, 199, 199);
   border-color: black;
   color: black;
   cursor: default;
 }
 
-.navigation-todo__gap{
+.navigation-todo__gap {
   color: darkred;
   letter-spacing: .5rem;
 }
