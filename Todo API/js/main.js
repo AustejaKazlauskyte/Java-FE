@@ -1,7 +1,16 @@
 const todoList = document.querySelector('.js-list-todo');
+
+const baseTodosPerPage = 15;
 let todosPerPage = 15;
 let currentPage = 1;
 let todosAll; // Šis kintamasis užsipildo ir yra naudojamas tik esant navigacijai
+let sortBy = null;
+let sortOrder = {
+  id: null,
+  userId: null,
+  title: null,
+  completed: null
+}
 
 function fecthTodoData() {
   // Tik duomenų užkrovimui
@@ -20,12 +29,14 @@ function renderTodos(todos) {
       renderTable(todos.slice(0, todosPerPage));
       if (todos.length > todosPerPage) {
         todosAll = todos;
+        renderRowCountSelector();
         renderNavigation(todos.length);
       }
     } else renderHeading('There are no things to do :(')
   } else {
     // Navigavimo atveju
     renderTable(todosAll.slice((currentPage - 1) * todosPerPage, currentPage * todosPerPage));
+    renderRowCountSelector();
     renderNavigation(todosAll.length);
   }
 }
@@ -33,14 +44,44 @@ function renderTodos(todos) {
 function renderTable(todos) {
   todoList.innerHTML = `
     <div class="list-todo__header">
-      <span>ID</span>
-      <span>User ID</span>
-      <span>Title</span>
-      <span>Completed</span>
+      <span class="list-todo__header__not-sorted">ID</span>
+      <span class="list-todo__header__not-sorted">User ID</span>
+      <span class="list-todo__header__not-sorted">Title</span>
+      <span class="list-todo__header__not-sorted">Completed</span>
     </div>
     <hr class="list-todo__header-line">`;
+  const idHeader = todoList.querySelector("span:nth-of-type(1)");
+  const userIdHeader = todoList.querySelector("span:nth-of-type(2)");
+  const titleHeader = todoList.querySelector("span:nth-of-type(3)");
+  const completedHeader = todoList.querySelector("span:nth-of-type(4)");
+
+  idHeader.addEventListener("click", sortTodosById);
+  userIdHeader.addEventListener("click", sortTodosByUserId);
+  titleHeader.addEventListener("click", sortTodosByTitle);
+  completedHeader.addEventListener("click", sortTodosByCompleted);
+
   let todoDataContainer = document.createElement('div');
   todoList.appendChild(todoDataContainer);
+  // ternary operatorius: (Salyga) ? [vykdoma jeigu salyga buvo true] : [vykdoma jeigu salyga buvo false];
+  switch (sortBy) {
+    case 'id':
+      todos.sort((a, b) => (Number(a.id) - Number(b.id)) * (sortOrder.id == 'asc' ? 1 : -1));
+      idHeader.classList.add(sortOrder.id);
+      break;
+    case 'userId':
+      todos.sort((a, b) => (Number(a.userId) - Number(b.userId)) * (sortOrder.userId == 'asc' ? 1 : -1));
+      userIdHeader.classList.add(sortOrder.userId);
+      break;
+    case 'title':
+      todos.sort((a, b) => (a.title > b.title ? 1 : a.title == b.title ? 0 : -1) * (sortOrder.title == 'asc' ? 1 : -1));
+      titleHeader.classList.add(sortOrder.title);
+      break;
+    case 'completed':
+      todos.sort((a, b) => (Number(a.completed) - Number(b.completed)) * (sortOrder.completed == 'asc' ? 1 : -1));
+      completedHeader.classList.add(sortOrder.completed);
+      break;
+  }
+
   todos.forEach(todo => {
     todoDataContainer.innerHTML += `
     <div class="list-todo__row">
@@ -50,6 +91,34 @@ function renderTable(todos) {
       <span>${todo.completed ? 'Completed' : 'Not completed'}</span>
     </div>`;
   });
+}
+
+function sortTodosById() {
+  sortBy = 'id';
+  if (sortOrder.id == 'asc') sortOrder.id = 'desc';
+  else sortOrder.id = 'asc';
+  renderTodos();
+}
+
+function sortTodosByUserId() {
+  sortBy = 'userId';
+  if (sortOrder.userId == 'asc') sortOrder.userId = 'desc';
+  else sortOrder.userId = 'asc';
+  renderTodos();
+}
+
+function sortTodosByTitle() {
+  sortBy = 'title';
+  if (sortOrder.title == 'asc') sortOrder.title = 'desc';
+  else sortOrder.title = 'asc';
+  renderTodos();
+}
+
+function sortTodosByCompleted() {
+  sortBy = 'completed';
+  if (sortOrder.completed == 'asc') sortOrder.completed = 'desc';
+  else sortOrder.completed = 'asc';
+  renderTodos();
 }
 
 function renderNavigation(count) {
@@ -126,7 +195,7 @@ function renderNavigation(count) {
     }
     navigation.appendChild(btnNumberNavigation);
   }
-  
+
   // Curry function metodologija - Sukuriamas nepasiekiamas kintamasis (pageNumber) grąžinamos funkcijos vykdymui
   function navigate(pageNumber) {
     return function () {
@@ -139,6 +208,29 @@ function renderNavigation(count) {
 function renderHeading(msg) {
   todoList.innerHTML = `<h1 class="heading-error">${msg}</h1>`;
 }
+
+function renderRowCountSelector() {
+  let rowCountSelector = document.createElement('div');
+  rowCountSelector.className = 'line-count';
+
+  for (let i = 1; i <= 4; i++) {
+    let btn = document.createElement('span');
+    if (todosPerPage ==  i * baseTodosPerPage ) btn.classList.add('active');
+    btn.innerHTML = i * baseTodosPerPage;
+    btn.addEventListener('click', changeRowsPerPageCount)
+    rowCountSelector.appendChild(btn);
+  }
+
+  todoList.appendChild(rowCountSelector);
+
+  function changeRowsPerPageCount(event) {
+    const btn = event.target;
+    todosPerPage = Number(btn.innerHTML);
+    renderTodos();
+  }
+}
+
 // Initial commands
 fecthTodoData();
+
 
