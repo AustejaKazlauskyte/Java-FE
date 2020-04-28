@@ -1,11 +1,8 @@
 1. Create view as in image: view.jpg, from data given is js/data.js file.
 2. Create img path for all people objects in js/data.js
-3. Please set variables as in this table, based on your task number;
------------------------------------------------
-| Nr. | x(rem) | y(rem) | a(color) | b(color) |
-|  1  |   1    |   1    |  #aaaaaa | #cccccc  |        
-|  2  |   1.3  |   1.25 |  #bbbbbb | #dddddd  |
-|  3  |   1.5  |   1.75 |  #cccccc | #eeeeee  |
-|  4  |   1.2  |   2    |  #e7e7e7 | #f7f7f7  |
-|  5  |   2    |   2.5  |  #f0f0f0 | #ffffff  |
+3. Form each card with javascript in js/main.js using js/data.js
+4. Please set variables as in this table;
+| x(rem) | y(rem) | a(color) | b(color) |
+|   1    |   1    |  #aaaaaa | #cccccc  |        
+
 

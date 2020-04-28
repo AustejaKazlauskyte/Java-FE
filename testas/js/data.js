@@ -4,20 +4,20 @@ const people = [
     surname: 'Nelson',
     jobTitle: 'Senior developer',
     age: 51,
-    image: 'PLACE THE CORRECT PATH HERE'
+    image: 'img/adam.jpg'
   },
   {
     name: "Eric",
     surname: "Peterson",
     jobTitle: 'Administrator',
     age: 22,
-    image: 'PLACE THE CORRECT PATH HERE'
+    image: 'img/eric.jpg'
   },
   {
     name: 'Jessica',
     surname: 'Silverton',
     jobTitle: 'Project manager',
     age: 32,
-    image: 'PLACE THE CORRECT PATH HERE'
+    image: 'img/jessica.jpg'
   }
 ]

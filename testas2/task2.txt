@@ -1,0 +1,11 @@
+1. Create view as in image: view.jpg, from data given is js/data.js file.
+2. Create img path for all blog objects in js/data.js
+3. Please set variables as in this table, based on your task number;
+-----------------------------------------------
+| Nr. | x(px) | y(px) | a(color) | b(color) |
+|  1  |  300  |  900  |  #aaaaaa | #cccccc  |        
+|  2  |  320  |  940  |  #bbbbbb | #dddddd  |
+|  3  |  340  |  980  |  #cccccc | #eeeeee  |
+|  4  |  360  | 1020  |  #e7e7e7 | #f7f7f7  |
+|  5  |  400  | 1040  |  #f0f0f0 | #ffffff  |
+
