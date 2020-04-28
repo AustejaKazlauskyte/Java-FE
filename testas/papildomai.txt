@@ -1,5 +1,6 @@
 1. Papildomai sukurti 3 koreteles.
 2. Sukurti mygtuką kiekvienos kortelės apačioje, jog jis vestų į bet kokį kitą puslapį atskirame skirtuke.
+    { Jeigu norite, nuorodą saugokite kiekviename duomenų objekte ir ją įterpkite kortelės formavimo metu }
 3. Pakoreguoti spalvas, jog jums patiktų
 4. Pakeisti viso teksto šriftą (Jeigu norit įsikelkit iš google fonts, kaip? -> https://www.google.lt)
 5. Sukurkite papildomą savybę duomenų objektams - Job experience, pvz.: ... ,jobExperience: 12, ... 
