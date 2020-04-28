@@ -1,0 +1,7 @@
+1. Papildomai sukurti 3 koreteles.
+2. Sukurti mygtuką kiekvienos kortelės apačioje, jog jis vestų į bet kokį kitą puslapį atskirame skirtuke.
+3. Pakoreguoti spalvas, jog jums patiktų
+4. Pakeisti viso teksto šriftą (Jeigu norit įsikelkit iš google fonts, kaip? -> https://www.google.lt)
+5. Sukurkite papildomą savybę duomenų objektams - Job experience, pvz.: ... ,jobExperience: 12, ... 
+    Sukurkite papildomą eilutę koretelėse tarp rolės ir vardo-pavardės. Kurioje būtų atvaizduojama kiekvienos
+    kortelės objekto jobExperience reikšmė, pvz: "12 years", "4 years".
