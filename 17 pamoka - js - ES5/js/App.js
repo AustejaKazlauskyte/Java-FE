@@ -36,13 +36,15 @@ class App {
   }
 
   render() {
+    this.root.innerHTML = ''; // Išvalo visą turinį
     if (!this.state.carsLoaded) {
+      // Neužsikrovus duomenims
       this.fetchCars()
-    }
-    if (!this.state.carsLoaded) {
-      this.root.innerHTML = '<img src="./assets/loading.gif">';
+      this.root.innerHTML = '<img class="page-loading" src="./assets/loading.gif">';
     } else {
-      this.root.innerHTML = 'Atvaizduotas masinu sarasas';
+      // Užsikrovus duomenims
+      const carContainer = new CarContainer(this.state.cars);
+      this.root.appendChild(carContainer.render());
     }
   }
 }

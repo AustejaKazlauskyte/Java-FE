@@ -1,0 +1,96 @@
+body {
+  margin: 0;
+  background: #f9f9f9;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+.page-loading {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 1000;
+}
+
+.car-container {
+  display: grid;
+  width: 1340px;
+  margin: 200px auto;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
+}
+
+.car-container__car {
+  position: relative;
+  background: #fff;
+  padding: 1.5rem;
+  box-shadow: 1px 2px 4px 1px #ccc, -1px 2px 4px 1px #ccc;
+}
+
+.car-container__car__img {
+  display: block;
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.car-container__car__price{
+  position: absolute;
+  top: .75rem;
+  right: .75rem;
+  background: linear-gradient(to bottom, green, rgb(0, 80, 0));
+  border-radius: 2px;
+  color: white;
+  padding: 1rem 1.5rem;
+}
+
+.car-container__car__price:after{
+  content: ' €';
+}
+
+.car-container__car__title {
+  display: flex;
+  justify-content: space-between;
+}
+
+.car-container__car__actions{
+  display: flex;
+  justify-content: space-evenly;
+  margin: 3rem;
+}
+
+.btn{
+  display: inline-block;
+  padding: 1rem 1.5rem;
+  box-shadow: 1px 2px 4px 1px #ccc, -1px 2px 4px 1px #ccc;
+  text-decoration: none;
+  color: #fff;
+
+}
+
+.btn:hover{
+  color: #eee;
+}
+
+.btn--blue{
+  background: linear-gradient(to bottom, rgb(0, 0, 128), rgb(0, 0, 80));
+}
+
+.btn--blue:hover{
+  background: linear-gradient(to bottom, rgb(0, 0, 80), rgb(0, 0, 128));
+}
+
+.btn--green{
+  background: linear-gradient(to bottom, rgb(0, 128, 0), rgb(0, 80, 0));
+}
+
+.btn--green:hover{
+  background: linear-gradient(to bottom, rgb(0, 80, 0), rgb(0, 128, 0));
+}
