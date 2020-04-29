@@ -26,25 +26,21 @@ class App {
     //     // Klaidu apdorojimas
     //   })
 
-      setTimeout(() => {
-        // Vykdomas kodas
-        this.setState({
-          cars: carData,
-          carsLoaded: true
-        });
-        console.log('Kodas vykstantis settimeout vidujhe');
-        res('asdasdasd');
-        rej('asdasdas')
-      }, 1000);
+    setTimeout(() => {
+      // Vykdomas kodas
+      this.setState({
+        cars: carData,
+        carsLoaded: true
+      });
+    }, 1000);
   }
 
   render() {
-    console.log('Render vykdymas prasideda')
     if (!this.state.carsLoaded) {
-       this.fetchCars()
+      this.fetchCars()
     }
     if (!this.state.carsLoaded) {
-      this.root.innerHTML = 'Duomenys Kraunasi ...';
+      this.root.innerHTML = '<img src="./assets/loading.gif">';
     } else {
       this.root.innerHTML = 'Atvaizduotas masinu sarasas';
     }
