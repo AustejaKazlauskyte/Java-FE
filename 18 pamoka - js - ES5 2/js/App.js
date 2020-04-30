@@ -6,6 +6,28 @@ class App {
     };
   }
 
+  sortCarsByTitle(asc){
+    console.log('sort cars by title', asc? 'asc': 'desc');
+  }
+
+  sortCarsByPrice(asc){
+    console.log('sort cars by price', asc? 'asc': 'desc');
+
+  }
+
+  sortCarsByYear(asc){
+    console.log('sort cars by year', asc? 'asc': 'desc');
+
+  }
+
+
+
+
+
+
+
+
+
   // Šî funkcija skirta programos duomenims keisti.
   // Po kiekvieno duomenų pasikeitimo yra atnaujinamas vaizdas kviečiant render() metodą;
   setState(newState) {
@@ -43,9 +65,34 @@ class App {
       this.root.innerHTML = '<img class="page-loading" src="./assets/loading.gif">';
     } else {
       // Užsikrovus duomenims
-      const sortButtonsContainer = new SortButtonsContainer();
+      const sortButtonsContainer = new SortButtonsContainer([
+        {
+          title: 'A-Z',
+          sortFunction: function() { this.sortCarsByTitle(true) }
+        },
+        {
+          title: 'Z-A',
+          sortFunction: function() { this.sortCarsByTitle(false) }
+        },
+        {
+          title: 'Price Low',
+          sortFunction: function() { this.sortCarsByPrice(true) }
+        },
+        {
+          title: 'Price High',
+          sortFunction: function() { this.sortCarsByPrice(false) }
+        },
+        {
+          title: 'Oldest',
+          sortFunction: function() { this.sortCarsByYear(true) }
+        },
+        {
+          title: 'Newest',
+          sortFunction: function() { this.sortCarsByYear(false) }
+        },
+      ]);
       const carContainer = new CarContainer(this.state.cars);
-      
+
       this.root.appendChild(sortButtonsContainer.render());
       this.root.appendChild(carContainer.render());
     }

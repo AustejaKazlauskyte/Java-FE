@@ -1,6 +1,8 @@
 class SortButtonsContainer {
-  constructor() {
-    
+  constructor(buttons) {
+    this.state = {
+      buttons
+    };
   }
 
   setState(newState) {
@@ -8,16 +10,19 @@ class SortButtonsContainer {
     this.render();
   }
 
+  formButton(btnData){
+    let element = document.createElement('div');
+    element.className = 'btn btn--blue';
+    element.innerHTML = btnData.title;
+    element.addEventListener('click', btnData.sortFunction)
+    return element;
+  }
+
   render() {
+    console.log(this.state);
     let element = document.createElement('div');
     element.className = 'container-sort';
-    element.innerHTML = `
-      <div class="btn btn--blue">A-Z</div>  
-      <div class="btn btn--blue">Z-A</div>  
-      <div class="btn btn--blue">Price low</div>  
-      <div class="btn btn--blue">Price high</div>  
-      <div class="btn btn--blue">Year ↑</div>  
-      <div class="btn btn--blue">Year ↓</div>`;
+    this.state.buttons.forEach(data => element.appendChild(this.formButton(data)))
     return element;
   }
 }
