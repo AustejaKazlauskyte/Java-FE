@@ -1,4 +1,4 @@
-class App {
+class App{
   constructor(selector) {
     this.root = document.querySelector(selector);
     this.state = {
@@ -6,27 +6,32 @@ class App {
     };
   }
 
-  sortCarsByTitle(asc){
-    console.log('sort cars by title', asc? 'asc': 'desc');
+  sortCarsByTitle(asc) {
+    this.setState({
+      ...this.state,
+      cars: this.state.cars.sort((a, b) => {
+        let title1 = a.brand + ' ' + a.model;
+        let title2 = b.brand + ' ' + b.model;
+        if (title1 === title2) return 0;
+        if (title1 > title2) return 1 * (asc ? 1 : -1);
+        return -1 * (asc ? 1 : -1);
+      })
+    })
   }
 
-  sortCarsByPrice(asc){
-    console.log('sort cars by price', asc? 'asc': 'desc');
-
+  sortCarsByPrice(asc) {
+    this.setState({
+      ...this.state,
+      cars: this.state.cars.sort((a, b) => (a.price - b.price) * (asc ? 1 : -1) )
+    })
   }
 
-  sortCarsByYear(asc){
-    console.log('sort cars by year', asc? 'asc': 'desc');
-
+  sortCarsByYear(asc) {
+    this.setState({
+      ...this.state,
+      cars: this.state.cars.sort((a, b) => (a.year - b.year) * (asc ? 1 : -1) )
+    })
   }
-
-
-
-
-
-
-
-
 
   // Šî funkcija skirta programos duomenims keisti.
   // Po kiekvieno duomenų pasikeitimo yra atnaujinamas vaizdas kviečiant render() metodą;
@@ -68,27 +73,27 @@ class App {
       const sortButtonsContainer = new SortButtonsContainer([
         {
           title: 'A-Z',
-          sortFunction: function() { this.sortCarsByTitle(true) }
+          sortFunction: function () { this.sortCarsByTitle(true) }.bind(this)
         },
         {
           title: 'Z-A',
-          sortFunction: function() { this.sortCarsByTitle(false) }
+          sortFunction: () => this.sortCarsByTitle(false)
         },
         {
           title: 'Price Low',
-          sortFunction: function() { this.sortCarsByPrice(true) }
+          sortFunction: () => this.sortCarsByPrice(true)
         },
         {
           title: 'Price High',
-          sortFunction: function() { this.sortCarsByPrice(false) }
+          sortFunction: () => this.sortCarsByPrice(false)
         },
         {
           title: 'Oldest',
-          sortFunction: function() { this.sortCarsByYear(true) }
+          sortFunction: () => this.sortCarsByYear(true)
         },
         {
           title: 'Newest',
-          sortFunction: function() { this.sortCarsByYear(false) }
+          sortFunction: () => this.sortCarsByYear(false)
         },
       ]);
       const carContainer = new CarContainer(this.state.cars);

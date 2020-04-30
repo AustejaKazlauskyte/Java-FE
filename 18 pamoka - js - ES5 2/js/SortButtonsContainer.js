@@ -19,10 +19,16 @@ class SortButtonsContainer {
   }
 
   render() {
-    console.log(this.state);
     let element = document.createElement('div');
     element.className = 'container-sort';
     this.state.buttons.forEach(data => element.appendChild(this.formButton(data)))
     return element;
   }
 }
+
+
+
+
+
+
+
