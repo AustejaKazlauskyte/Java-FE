@@ -1,0 +1,28 @@
+1. Susikurkite tokią projekto struktūrą: [1]
+  index.html
+  js/
+    main.js
+    data.js
+  styles/
+    main.css
+
+2. Į index.html įtraukite visus stiliaus ir javascript failus [1]
+
+3. Sukurkite lentelę ir ją stilizuokite main.css faile. [3]
+  3.1 Lentelė turi turėti antraštę: "Knygos"
+  3.2 Lentelė turi būti 1200px pločio ir vidurį ekrano.
+  3.3 Kas antra lentelės eilutė turi būti skirtingos spalvos
+
+4. data.js faile sukurkite knygų objektų masyvą su mažiausiai 6 knygų objektais. [1]
+  kiekviena knyga turi turėti savybes: title, author, year, genre
+
+5. main.js faile parašykite kodą, kuris naudodamas data.js duomenis suformuotų duomenis lentelėje. [3]
+
+6. Sukurkite patikrinimą, jog jeigu duomenų masyvas tuščias, vietoj lentelės būtų atspausdinama [1]
+
+Aplanką su savo atlikta užduotimi pavadinkite savo vardu ir pavarde, pvz.: Serbentautas Bordiūras
+Sukurkite repozitoriją ir į ją įdėkite savo aplanką.
+Nuorodą į savo repozitoriją įdėkite į Facebook grupės post'ą, kuriame būsiu paskelbęs užduoties terminus.
+
+Sėkmės
+
