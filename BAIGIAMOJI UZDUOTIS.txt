@@ -18,7 +18,7 @@
 
 5. main.js faile parašykite kodą, kuris naudodamas data.js duomenis suformuotų duomenis lentelėje. [3]
 
-6. Sukurkite patikrinimą, jog jeigu duomenų masyvas tuščias, vietoj lentelės būtų atspausdinama [1]
+6. Sukurkite patikrinimą, jog jeigu duomenų masyvas tuščias, vietoj lentelės būtų atspausdinama antraštė su pranešimu apie duomenų nebuvimą [1]
 
 Aplanką su savo atlikta užduotimi pavadinkite savo vardu ir pavarde, pvz.: Serbentautas Bordiūras
 Sukurkite repozitoriją ir į ją įdėkite savo aplanką.
